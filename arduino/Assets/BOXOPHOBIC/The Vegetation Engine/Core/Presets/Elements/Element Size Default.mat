@@ -88,6 +88,7 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Intensity: 1
+    - _IsElementShader: 1
     - _IsExtrasShader: 1
     - _IsStandardPipeline: 0
     - _IsTVEElement: 1
@@ -95,7 +96,7 @@ Material:
     - _IsVersion: 200
     - _MainTexMaxValue: 1
     - _MainTexMinValue: 0
-    - _MainValue: 1
+    - _MainValue: 0.5
     - _Message: 0
     - _Message1: 0
     - _Metallic: 0

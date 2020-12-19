@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Meadow_Grass_01 (TVE Material)
-  m_Shader: {fileID: 4800000, guid: 5bcf549c936e31b4999f2c7e28ba5e31, type: 3}
+  m_Shader: {fileID: 4800000, guid: 04f676b9352602040b5ffe58897e6e1b, type: 3}
   m_ShaderKeywords: TVE_DETAIL_MAPS_STANDARD TVE_DETAIL_MODE_OFF TVE_DETAIL_TYPE_VERTEX_BLUE
     TVE_VERTEX_DATA_OBJECT TVE_VERTEX_MOTION_OBJECT _ALPHATEST_ON _ANIM_SINGLE_PIVOT_COLOR
     _DISABLE_DBUFFER _MASKMAP _MATERIAL_FEATURE_TRANSMISSION _NORMALMAP _NORMALMAP_TANGENT_SPACE
@@ -446,7 +446,7 @@ Material:
     - _GlobalLeaves: 1
     - _GlobalOverlay: 1
     - _GlobalSize: 1
-    - _GlobalSizeFade: 0
+    - _GlobalSizeFade: 1
     - _GlobalSpace: 0
     - _GlobalWetness: 1
     - _GlossMapScale: 1
@@ -473,12 +473,13 @@ Material:
     - _HorizonFade: 1
     - _IOR: 1
     - _InitialBend: 1
-    - _InteractionAmplitude: 1.5
+    - _InteractionAmplitude: 1
     - _InteractionVariation: 0
     - _InvTilingScale: 1
     - _Ior: 1
     - _IridescenceMask: 1
     - _IridescenceThickness: 1
+    - _IsAnyPathShader: 1
     - _IsForwardPathShader: 1
     - _IsGrassShader: 1
     - _IsLeafShader: 1
@@ -495,12 +496,12 @@ Material:
     - _LocalSize: 1
     - _LocalSpace: 0
     - _MainCat: 0
-    - _MainMaskMaxValue: 1
+    - _MainMaskMaxValue: 0
     - _MainMaskMinValue: 0
     - _MainMessage: 0
     - _MainMetallicValue: 0
-    - _MainNormalValue: 2
-    - _MainOcclusionValue: 0.5
+    - _MainNormalValue: -1.191
+    - _MainOcclusionValue: 0
     - _MainSmoothnessValue: 0
     - _MaskMapEncoding: 1
     - _MaskMode: 0
@@ -508,22 +509,22 @@ Material:
     - _Metallic: 0
     - _Mode: 3
     - _MoiseCat: 0
-    - _MotionAmplitude_10: 0.5
-    - _MotionAmplitude_20: 0
+    - _MotionAmplitude_10: 1
+    - _MotionAmplitude_20: 0.596
     - _MotionAmplitude_30: 0
     - _MotionAmplitude_32: 0.1
     - _MotionCat: 0
     - _MotionScale_10: 1
     - _MotionScale_20: 0
-    - _MotionScale_30: 30
+    - _MotionScale_30: 20
     - _MotionScale_32: 10
     - _MotionSpeed_10: 6
-    - _MotionSpeed_20: 5
-    - _MotionSpeed_30: 15
+    - _MotionSpeed_20: 15
+    - _MotionSpeed_30: 19
     - _MotionSpeed_32: 30
     - _MotionVariation_10: 3
     - _MotionVariation_20: 0
-    - _MotionVariation_30: 30
+    - _MotionVariation_30: 20
     - _MotionVariation_32: 10
     - _MotionVectorScale: 1
     - _MotionVectorsWorldspaceScaled: 0
@@ -534,7 +535,7 @@ Material:
     - _Motion_Interaction: 1
     - _NoiseMaxValue: 1
     - _NoiseMinValue: 0
-    - _NoiseScaleValue: 0.01
+    - _NoiseScaleValue: 0
     - _NormalMapSpace: 0
     - _NormalScale: 5
     - _ObjectDataMessage: 0
@@ -553,10 +554,10 @@ Material:
     - _PPDPrimitiveLength: 1
     - _PPDPrimitiveWidth: 1
     - _Parallax: 0.02
-    - _PerspectiveAngleValue: 1
+    - _PerspectiveAngleValue: 5.17
     - _PerspectiveCat: 0
-    - _PerspectiveNoiseValue: 0.25
-    - _PerspectivePushValue: 1
+    - _PerspectiveNoiseValue: 0
+    - _PerspectivePushValue: 0.894
     - _PivotsMessage: 0
     - _PreRefractionPass: 0
     - _RefractionMode: 0
@@ -565,7 +566,7 @@ Material:
     - _RenderBlend: 0
     - _RenderClip: 1
     - _RenderCull: 0
-    - _RenderCutoff: 0.5
+    - _RenderCutoff: 0
     - _RenderMode: 0
     - _RenderNormals: 0
     - _RenderPriority: 0
@@ -591,7 +592,7 @@ Material:
     - _StencilWriteMask: 135
     - _StencilWriteMaskMV: 128
     - _Stiffness: 1
-    - _SubsurfaceAngleValue: 2
+    - _SubsurfaceAngleValue: 3.021
     - _SubsurfaceCat: 0
     - _SubsurfaceLightValue: 1
     - _SubsurfaceMask: 1
@@ -602,7 +603,7 @@ Material:
     - _SubsurfaceProfile: 0
     - _SubsurfaceRadius: 1
     - _SubsurfaceValue: 1
-    - _SubsurfaceViewValue: 1
+    - _SubsurfaceViewValue: 2.383
     - _SupportDBuffer: 0
     - _SurfaceCategory: 0
     - _SurfaceMessage: 0
@@ -640,7 +641,7 @@ Material:
     - _VertexDataMode: 0
     - _VertexMotionMode: 0
     - _VertexMotionSpace: 0
-    - _VertexOcclusionValue: 1
+    - _VertexOcclusionValue: 0
     - _VertexPivotMode: 1
     - _VertexPivotModeFetch: 1
     - _VertexVariationMode: 0
@@ -686,34 +687,34 @@ Material:
     - _BackfaceBaseColorScale: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 0.7960573, g: 0.80477035, b: 0.8396226, a: 1}
     - _BaseColorRandomize: {r: 0, g: 0, b: 0, a: 0.05}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.0024509116, g: 0.509434, b: 0, a: 1}
     - _DoubleSidedConstants: {r: -1, g: -1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
-    - _GradientColorOne: {r: 1, g: 1, b: 1, a: 1}
-    - _GradientColorTwo: {r: 1, g: 1, b: 1, a: 1}
+    - _GradientColorOne: {r: 0.12220478, g: 1, b: 0, a: 1}
+    - _GradientColorTwo: {r: 0.1023435, g: 0.5471698, b: 0.012904947, a: 1}
     - _ImposterOffset: {r: 0.5, g: 0, b: 0, a: 0}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _LocalColors: {r: 1, g: 1, b: 1, a: 1}
-    - _MainColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MainColor: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 0}
     - _MainUVs: {r: 1, g: 1, b: 0, a: 0}
     - _MaxBoundsInfo: {r: 4.124504, g: 0.6932245, b: 4.124504, a: 0}
-    - _MotionHighlightColor: {r: 2.5882354, g: 2.9960785, b: 0.8, a: 1}
-    - _NoiseTintOne: {r: 1, g: 1, b: 1, a: 1}
-    - _NoiseTintTwo: {r: 1, g: 1, b: 1, a: 1}
+    - _MotionHighlightColor: {r: 0, g: 1, b: 0, a: 1}
+    - _NoiseTintOne: {r: 0.070791736, g: 0.735849, b: 0, a: 0}
+    - _NoiseTintTwo: {r: 0, g: 1, b: 0.16233277, a: 0}
     - _PeeledBarkColor: {r: 1, g: 1, b: 1, a: 1}
     - _PeeledBarkColorAlt: {r: 0.9, g: 0.9, b: 1, a: 1}
     - _PeeledBarkUVRangeScale: {r: 0, g: 1, b: 2, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SubsurfaceColor: {r: 0.2956671, g: 0.3396226, b: 0.001601997, a: 1}
+    - _SubsurfaceColor: {r: 1, g: 1, b: 1, a: 0}
     - _SubsurfaceDiffusion_asset: {r: 0, g: 0, b: 0, a: 0}
     - _ThicknessRemap: {r: 0, g: 0.6239516, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
-    - _VertexOcclusionColor: {r: 0.1695888, g: 0.2177895, b: 0.3490566, a: 0}
+    - _VertexOcclusionColor: {r: 0.00965035, g: 1, b: 0, a: 1}
     - _render_normals_options: {r: -1, g: -1, b: -1, a: 0}
   m_BuildTextureStacks: []
