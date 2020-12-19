@@ -1,0 +1,3 @@
+Make sure you duplicate the prefabs before using them, there might be some changes which will override your settings!
+
+

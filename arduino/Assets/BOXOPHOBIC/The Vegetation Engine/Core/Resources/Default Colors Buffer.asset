@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc555008abc3f5544b814a0ff2c0fa54, type: 3}
+  m_Name: Default Colors Buffer
+  m_EditorClassIdentifier: 
+  styledBanner: 0
+  internalBufferMessage: 1
+  bufferMode: 1
+  bufferName: TVE Colors
+  bufferType: 10
+  bufferLayer: 0
+  textureFormat: 20
+  textureResolution: 1024
+  textureWrapMode: 0
+  internalTex: {fileID: 0}
+  isUpdated: 0
+  internalResolution: 1024
+  internalFormat: 9
+  internalColor: {r: 0.21404114, g: 0.21404114, b: 0.21404114, a: 1}
+  internalTexLegacy: TVE_ColorsTex
+  internalTexVegetation: TVE_ColorsTex_Vegetation
+  internalTexGrass: TVE_ColorsTex_Grass
+  internalTexObjects: TVE_ColorsTex_Objects
+  internalTexCustom: TVE_ColorsTex_Custom

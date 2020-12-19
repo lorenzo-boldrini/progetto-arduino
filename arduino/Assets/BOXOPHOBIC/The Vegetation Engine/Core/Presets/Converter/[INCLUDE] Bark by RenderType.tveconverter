@@ -1,0 +1,6 @@
+// Disable Features for Bark
+Material RENDERTYPE_TAG_TO_SHADER Opaque SHADER_DEFAULT_BARK
+Material RENDERTYPE_TAG_TO_FLOAT Opaque _Motion_30 0
+Material RENDERTYPE_TAG_TO_FLOAT Opaque _Motion_32 0
+Material RENDERTYPE_TAG_TO_FLOAT Opaque _GlobalColors 0
+Material RENDERTYPE_TAG_TO_FLOAT Opaque _RenderClip 0

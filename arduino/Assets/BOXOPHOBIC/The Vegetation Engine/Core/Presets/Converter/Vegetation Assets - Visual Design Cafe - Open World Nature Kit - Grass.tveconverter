@@ -1,0 +1,33 @@
+*******************************************************************
+*                             INFO                                *
+*******************************************************************
+
+InfoTitle Visual Design Cafe
+InfoPreset Use this preset to convert Visual Design Cafe's Open World Nature Kit Grass. Set the Vertex Data to World for simple translation motion instead of bending!
+InfoStatus ● ● ● ● ●
+InfoOnline https://assetstore.unity.com/packages/3d/environments/landscapes/open-world-nature-kit-150748
+
+*******************************************************************
+*                             PRESET                              *
+*******************************************************************
+
+Conversion VEGETATION
+
+// Set Mesh Masks
+Mesh Variation GET_MASK_FROM_CHANNEL 1
+Mesh Occlusion GET_MASK_FROM_CHANNEL 3
+Mesh DetailMask NONE
+Mesh MultiMask NONE
+
+Mesh DetailCoord GET_COORD_PROCEDURAL 3
+
+Mesh Motion1 GET_MASK_PROCEDURAL 12
+Mesh Motion2 GET_MASK_PROCEDURAL 12
+Mesh Motion3 GET_MASK_PROCEDURAL 12
+
+*******************************************************************
+
+// Set Material Shader
+Include Nature Renderer Commons
+
+Include Default Grass Settings

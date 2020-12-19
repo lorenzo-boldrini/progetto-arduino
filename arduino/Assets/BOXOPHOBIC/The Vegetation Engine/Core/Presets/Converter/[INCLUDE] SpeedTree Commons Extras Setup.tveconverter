@@ -1,0 +1,55 @@
+// Set Material Shader
+Material KEYWORD_ON_TO_SHADER GEOM_TYPE_BRANCH SHADER_DEFAULT_BARK
+Material KEYWORD_ON_TO_SHADER GEOM_TYPE_BRANCH_DETAIL SHADER_DEFAULT_BARK
+Material KEYWORD_OFF_TO_SHADER EFFECT_SUBSURFACE SHADER_DEFAULT_BARK
+Material KEYWORD_ON_TO_SHADER EFFECT_BILLBOARD SHADER_DEFAULT_CROSS
+Material FLOAT_TO_SHADER _SubsurfaceKwToggle 0.0 SHADER_DEFAULT_BARK
+
+// Disable Features for Billboards
+Material KEYWORD_ON_TO_FLOAT EFFECT_BILLBOARD _RenderCull 2
+
+// Disable Features for Bark
+Material KEYWORD_ON_TO_FLOAT GEOM_TYPE_BRANCH _RenderClip 0
+Material KEYWORD_ON_TO_FLOAT GEOM_TYPE_BRANCH_DETAIL _RenderClip 0
+Material KEYWORD_OFF_TO_FLOAT EFFECT_SUBSURFACE _RenderClip 0
+Material COPY_FLOAT _SubsurfaceKwToggle _RenderClip 0
+
+Material KEYWORD_ON_TO_FLOAT GEOM_TYPE_BRANCH _Motion_30 0
+Material KEYWORD_ON_TO_FLOAT GEOM_TYPE_BRANCH_DETAIL _Motion_30 0
+Material KEYWORD_OFF_TO_FLOAT EFFECT_SUBSURFACE _Motion_30 0
+Material COPY_FLOAT _SubsurfaceKwToggle _Motion_30 0
+
+Material KEYWORD_ON_TO_FLOAT GEOM_TYPE_BRANCH _Motion_32 0
+Material KEYWORD_ON_TO_FLOAT GEOM_TYPE_BRANCH_DETAIL _Motion_32 0
+Material KEYWORD_OFF_TO_FLOAT EFFECT_SUBSURFACE _Motion_32 0
+Material COPY_FLOAT _SubsurfaceKwToggle _Motion_32 0
+
+Material KEYWORD_ON_TO_FLOAT GEOM_TYPE_BRANCH _GlobalColors 0
+Material KEYWORD_ON_TO_FLOAT GEOM_TYPE_BRANCH_DETAIL _GlobalColors 0
+Material KEYWORD_OFF_TO_FLOAT EFFECT_SUBSURFACE _GlobalColors 0
+Material COPY_FLOAT _SubsurfaceKwToggle _GlobalColors 0
+
+// Set default settings
+Material SET_FLOAT _GlobalSize 0
+Material SET_FLOAT _GlobalSizeFade 0
+Material SET_FLOAT _Cutoff 0.333
+
+// Copy Material Properties
+Material COPY_COLOR _Color _MainColor
+Material COPY_COLOR _Color _MainColorVariation
+Material COPY_TEX _MainTex _MainAlbedoTex
+Material COPY_ST_AS_VECTOR _MainTex _MainUVs
+Material COPY_TEX _BumpMap _MainNormalTex
+Material COPY_FLOAT _Metallic _MainMetallicValue
+// Set Smoothness for SpeedTree 7
+Material SET_FLOAT _MainSmoothnessValue 0.25
+// Set Smoothness for SpeedTree 8
+Material COPY_FLOAT _Glossiness _MainSmoothnessValue
+
+Material SET_COLOR _SubsurfaceColor 0.33 0.50 0 0
+
+// Combine Texture Channels
+Texture MainMetallic GET_GREEN _ExtraTex
+Texture MainOcclusion GET_BLUE _ExtraTex
+Texture MainMask GET_GRAY _SubsurfaceTex
+Texture MainSmoothness GET_RED _ExtraTex

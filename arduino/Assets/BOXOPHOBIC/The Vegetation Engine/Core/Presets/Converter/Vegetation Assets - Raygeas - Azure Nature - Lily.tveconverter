@@ -1,0 +1,48 @@
+*******************************************************************
+*                             INFO                                *
+*******************************************************************
+
+InfoTitle Raygeas Azure Nature
+InfoPreset Use this preset to convert Raygeas Azure Nature assets. Gradient and motion adjustments might be needed after conversion!
+InfoStatus InfoStatus ● ● ● ● ●
+InfoOnline https://assetstore.unity.com/packages/3d/environments/fantasy/azure-nature-167725
+
+*******************************************************************
+*                             PRESET                              *
+*******************************************************************
+
+Conversion VEGETATION
+
+Mesh Variation NONE
+Mesh Occlusion NONE
+Mesh DetailMask NONE
+Mesh MultiMask NONE
+
+Mesh DetailCoord NONE
+
+Mesh Motion1 GET_MASK_PROCEDURAL 1
+Mesh Motion2 GET_MASK_PROCEDURAL 1
+Mesh Motion3 GET_MASK_PROCEDURAL 1
+
+*******************************************************************
+
+// Copy material props
+Material COPY_TEX _Texture00 _MainAlbedoTex
+Material COPY_ST_AS_VECTOR _Texture00 _MainUVs
+Material COPY_FLOAT _Smoothness _MainSmoothnessValue
+
+// Set dual color
+Material COPY_COLOR _Color2 _GradientColorOne
+Material COPY_COLOR _Color1 _GradientColorTwo
+
+*******************************************************************
+
+Material SET_FLOAT _MotionAmplitude_10 0.05
+Material SET_FLOAT _MotionSpeed_10 6
+Material SET_FLOAT _MotionScale_10 6
+
+Material SET_FLOAT _MotionAmplitude_20 0
+Material SET_FLOAT _MotionAmplitude_30 0
+Material SET_FLOAT _MotionAmplitude_32 0
+
+*******************************************************************

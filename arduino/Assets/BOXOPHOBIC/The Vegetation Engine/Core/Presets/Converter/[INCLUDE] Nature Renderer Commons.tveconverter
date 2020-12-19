@@ -1,0 +1,40 @@
+// Copy Material Properties
+Material COPY_COLOR _Tint _MainColor
+Material COPY_COLOR _TintVariation _MainColorVariation
+Material COPY_TEX _Albedo _MainAlbedoTex
+
+Material COPY_TEX _BumpMap _MainNormalTex
+Material COPY_FLOAT _BumpScale _MainNormalValue
+
+Material COPY_FLOAT _Metallic _MainMetallicValue
+Material COPY_FLOAT _Glossiness _MainSmoothnessValue
+Material SET_FLOAT _MainOcclusionValue 0.5
+
+*******************************************************************
+
+// Default values
+Material SET_FLOAT _RenderNormals 2
+Material SET_FLOAT _VertexOcclusionValue 1
+
+*******************************************************************
+
+// Set Bark Settings
+Material SHADER_NAME_TO_SHADER Bark SHADER_DEFAULT_BARK
+Material SHADER_NAME_TO_FLOAT Bark _Motion_30 0
+Material SHADER_NAME_TO_FLOAT Bark _Motion_32 0
+Material SHADER_NAME_TO_FLOAT Bark _GlobalColors 0
+Material SHADER_NAME_TO_FLOAT Bark _RenderClip 0
+
+*******************************************************************
+
+// Combine Texture Channels for Metallic Gloss Setup
+Texture MainMetallic GET_RED _MetallicGlossMap
+Texture MainOcclusion GET_GREEN _OcclusionMap
+Texture MainMask GET_GRAY _ThicknessMap
+Texture MainSmoothness GET_ALPHA _MetallicGlossMap
+
+// Combine Texture Channels for Mask Setup
+Texture MainMetallic GET_RED _MaskMap
+Texture MainOcclusion GET_GREEN _MaskMap
+Texture MainMask GET_GRAY _ThicknessMap
+Texture MainSmoothness GET_ALPHA _MaskMap

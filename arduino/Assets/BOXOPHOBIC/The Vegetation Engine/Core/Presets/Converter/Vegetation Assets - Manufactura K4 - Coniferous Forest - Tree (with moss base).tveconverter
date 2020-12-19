@@ -1,0 +1,147 @@
+*******************************************************************
+*                             INFO                                *
+*******************************************************************
+
+InfoTitle Manufactura K4
+InfoPreset Use this preset to convert Manufactura K4 Trees with mossy base. The bark texture blending will look different but similar to the original blending. Due to high resolution meshes, the conversion can be quite slow.
+InfoStatus ● ● ● ○ ○
+InfoOnline https://assetstore.unity.com/packages/3d/vegetation/coniferous-forest-119434
+
+*******************************************************************
+*                             PRESET                              *
+*******************************************************************
+
+Conversion VEGETATION
+
+Mesh Variation GET_MASK_PROCEDURAL 3
+Mesh Occlusion GET_MASK_PROCEDURAL 7
+Mesh DetailMask GET_MASK_FROM_CHANNEL 1 ACTION_INVERT
+Mesh DetailCoord GET_COORD_FROM_CHANNEL 0
+
+Mesh Motion1 GET_MASK_PROCEDURAL 4
+Mesh Motion2 GET_MASK_PROCEDURAL 7
+Mesh Motion3 GET_MASK_PROCEDURAL 5
+
+*******************************************************************
+
+// Set Bark
+Material SHADER_NAME_TO_SHADER Bark SHADER_DEFAULT_BARK
+Material SHADER_NAME_TO_FLOAT Bark _Motion_30 0
+Material SHADER_NAME_TO_FLOAT Bark _Motion_32 0
+Material SHADER_NAME_TO_FLOAT Bark _GlobalColors 0
+Material SHADER_NAME_TO_FLOAT Bark _RenderCull 2
+Material SHADER_NAME_TO_FLOAT Bark _RenderClip 0
+
+// Set Bark by Stabdard Shader
+Material SHADER_NAME_TO_SHADER Standard SHADER_DEFAULT_BARK
+Material SHADER_NAME_TO_FLOAT Standard _UseMotion_Leaves 0
+Material SHADER_NAME_TO_FLOAT Standard _GlobalColors 0
+Material SHADER_NAME_TO_FLOAT Standard _RenderCull 2
+Material SHADER_NAME_TO_FLOAT Standard _RenderClip 0
+
+// Set Bllboard by Stabdard Shader
+Material RENDERTYPE_TAG_TO_SHADER Transparent SHADER_DEFAULT_CROSS
+Material RENDERTYPE_TAG_TO_FLOAT Transparent _RenderCull 2
+Material RENDERTYPE_TAG_TO_FLOAT Transparent _RenderClip 1
+
+*******************************************************************
+
+// Copy Standard Pipeline Material Properties
+Material COPY_COLOR _Color _MainColor
+Material COPY_COLOR _Color _MainColorVariation
+Material COPY_TEX _MainTex _MainAlbedoTex
+Material COPY_ST_AS_VECTOR _MainTex _MainUVs
+
+Material COPY_TEX _BumpMap _MainNormalTex
+Material COPY_FLOAT _BumpScale _MainNormalValue
+
+Material COPY_TEX _MetallicGlossMap _MainMaskTex
+Material COPY_FLOAT _Metallic _MainMetallicValue
+Material COPY_FLOAT _OcclusionStrength _MainOcclusionValue
+Material COPY_FLOAT _Glossiness _MainSmoothnessValue
+Material COPY_FLOAT _GlossMapScale _MainSmoothnessValue
+
+*******************************************************************
+
+// Copy Leaves props
+Material COPY_TEX _TransGlossAOWind _SubsurfaceTex
+
+Material COPY_COLOR _Color _MainColor
+Material COPY_COLOR _Color _MainColorVariation
+Material COPY_TEX _Albedo _MainAlbedoTex
+Material COPY_ST_AS_VECTOR _Albedo _MainUVs
+
+Material COPY_TEX _NormalMap _MainNormalTex
+Material COPY_FLOAT _NormalScale _MainNormalValue
+
+//Material COPY_TEX _MetallicGlossMap _MainMaskTex
+//Material COPY_FLOAT _Metallic _MainMetallicValue
+//Material COPY_FLOAT _OcclusionStrength _MainOcclusionValue
+//Material COPY_FLOAT _Glossiness _MainSmoothnessValue
+//Material COPY_FLOAT _GlossMapScale _MainSmoothnessValue
+
+*******************************************************************
+
+// Copy Bark props
+Material COPY_TEX _Albedo _MainAlbedoTex
+Material COPY_ST_AS_VECTOR _Albedo _MainUVs
+Material COPY_TEX _Normals _MainNormalTex
+Material COPY_FLOAT _NormalScale _MainNormalValue
+
+Material COPY_TEX _Moss _SecondAlbedoTex
+Material COPY_ST_AS_VECTOR _Moss _SecondUVs
+Material COPY_TEX _MossNormal _SecondNormalTex
+Material COPY_FLOAT _MossNormalScale _SecondNormalValue
+
+*******************************************************************
+
+//Enable Betail shading
+Material SHADER_NAME_TO_KEYWORD_ON Bark _DETAIL_HEIGHT
+Material SHADER_NAME_TO_FLOAT Bark _DetailMode 2
+Material SHADER_NAME_TO_FLOAT Bark _DetailMaskMode 1
+
+Material SET_FLOAT _DetailMaskValue 0
+Material SET_FLOAT _DetailMeshValue 0.5
+Material SET_FLOAT _DetailMaskContrast 0.45
+
+*******************************************************************
+
+// Set default props
+Material SET_FLOAT _RenderNormals 2
+Material SET_FLOAT _SubsurfaceValue 0
+Material SET_FLOAT _VertexOcclusionValue 0.1
+Material SET_FLOAT _MainSmoothnessValue 1
+Material SET_FLOAT _SecondSmoothnessValue 0
+Material SET_FLOAT _GlobalSize 0
+Material SET_FLOAT _GlobalSizeFade 0
+
+*******************************************************************
+
+// Combine Texture for Leaves
+Texture MainMetallic NONE
+Texture MainOcclusion GET_BLUE _TransGlossAOWind
+Texture MainMask GET_RED _TransGlossAOWind
+Texture MainSmoothness GET_GREEN _TransGlossAOWind
+
+// Combine Texture for Bark
+Texture MainMetallic NONE
+Texture MainOcclusion GET_GREEN _Gloss_ao_mask
+Texture MainMask GET_BLUE _Gloss_ao_mask
+Texture MainSmoothness GET_RED _Gloss_ao_mask
+
+Texture SecondMetallic NONE
+Texture SecondOcclusion NONE
+Texture SecondMask GET_ALPHA _Moss
+Texture SecondSmoothness NONE
+
+
+
+
+
+
+
+
+
+
+
+

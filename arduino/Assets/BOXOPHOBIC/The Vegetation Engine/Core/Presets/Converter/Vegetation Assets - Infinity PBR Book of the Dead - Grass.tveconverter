@@ -1,0 +1,44 @@
+*******************************************************************
+*                             INFO                                *
+*******************************************************************
+
+InfoTitle Infinity PBR
+InfoPreset Use this preset to convert Grass assets from: New Textures & Standard Pipeline Conversion for Book of the Dead FREE package by Infinity PBR. The conversion might not work as expected! Set the Vertex Data to World for simple translation motion instead of bending!
+InfoStatus ● ● ● ● ●
+InfoOnline https://assetstore.unity.com/publishers/4645
+
+*******************************************************************
+*                             PRESET                              *
+*******************************************************************
+
+Conversion VEGETATION
+
+Mesh Variation GET_MASK_PROCEDURAL 3
+Mesh Occlusion GET_MASK_PROCEDURAL 4
+Mesh DetailMask NONE
+Mesh MultiMask NONE
+
+Mesh DetailCoord GET_COORD_PROCEDURAL 3
+
+Mesh Motion1 GET_MASK_PROCEDURAL 12
+Mesh Motion2 GET_MASK_PROCEDURAL 12
+Mesh Motion3 GET_MASK_PROCEDURAL 12
+
+*******************************************************************
+
+Include Use Default Grass Settings
+
+*******************************************************************
+
+// Enable Material Features
+Material SET_COLOR _SubsurfaceColor 0.1 0.1 0.0 0.0
+Material SET_COLOR _RenderNormals 0
+
+// Copy Material Properties
+Material COPY_TEX _MainTex _MainAlbedoTex
+Material COPY_ST_AS_VECTOR _MainTex _MainUVs
+Material COPY_TEX _Diffuse _MainAlbedoTex
+Material COPY_ST_AS_VECTOR _Diffuse _MainUVs
+
+Material COPY_TEX _Normal _MainNormalTex
+Material COPY_TEX _Maskmap _MainMaskTex

@@ -1,0 +1,69 @@
+*******************************************************************
+*                             INFO                                *
+*******************************************************************
+
+InfoTitle Synty
+InfoPreset Use this preset to convert Synty's polygonal vegetation. Tested with the POLYGON Nature Pack.
+InfoStatus ● ● ● ○ ○
+InfoOnline https://assetstore.unity.com/publishers/5217
+
+*******************************************************************
+*                             PRESET                              *
+*******************************************************************
+
+Conversion VEGETATION
+
+Mesh Variation NONE
+Mesh Occlusion NONE
+Mesh DetailMask GET_MASK_PROCEDURAL 8
+Mesh MultiMask NONE
+
+Mesh DetailCoord GET_COORD_FROM_CHANNEL 0
+
+Mesh Motion1 GET_MASK_FROM_CHANNEL 2 ACTION_INVERT
+Mesh Motion2 GET_MASK_FROM_CHANNEL 0 ACTION_INVERT
+Mesh Motion3 GET_MASK_PROCEDURAL 0
+
+*******************************************************************
+
+// Set Shader
+Material SHADER_NAME_TO_SHADER Trees SHADER_DEFAULT_BARK
+
+*******************************************************************
+
+// Enable Material Features
+Material SET_FLOAT _GlobalColors 0
+Material SET_FLOAT _GlobalSize 0
+Material SET_FLOAT _GlobalSizeFade 0
+
+Material SET_FLOAT _RenderClip 0
+Material SET_FLOAT _RenderNormals 2
+
+Material SET_FLOAT _MainSmoothnessValue 0
+Material SET_FLOAT _MainOcclusionValue 0
+
+Material SET_FLOAT _MotionVariation_20 0
+Material SET_FLOAT _MotionScale_20 30
+Material SET_FLOAT _MotionVariation_32 0
+
+*******************************************************************
+
+// Copy Standard Pipeline Material Properties
+Material COPY_COLOR _ColorTint _MainColor
+Material COPY_COLOR _ColorTint _MainColorVariation
+Material COPY_TEX _MainTexture _MainAlbedoTex
+Material COPY_ST_AS_VECTOR _MainTexture _MainUVs
+
+*******************************************************************
+
+// Copy Universal Pipeline Material Properties
+Material COPY_COLOR Color_369F793F _MainColor
+Material COPY_TEX Texture2D_CAD82441 _MainAlbedoTex
+
+*******************************************************************
+
+//Set Motion Values
+Material SET_FLOAT _MotionVariation_20 0
+Material SET_FLOAT _MotionScale_20 30
+Material SET_FLOAT _MotionVariation_32 0
+

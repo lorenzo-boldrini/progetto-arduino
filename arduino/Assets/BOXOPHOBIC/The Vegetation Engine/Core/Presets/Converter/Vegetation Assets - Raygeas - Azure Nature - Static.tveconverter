@@ -1,0 +1,49 @@
+*******************************************************************
+*                             INFO                                *
+*******************************************************************
+
+InfoTitle Raygeas Azure Nature
+InfoPreset Use this preset to convert Raygeas Azure Nature assets. Material might need adjustments after conversion!
+InfoStatus InfoStatus ● ● ● ● ●
+InfoOnline https://assetstore.unity.com/packages/3d/environments/fantasy/azure-nature-167725
+
+*******************************************************************
+*                             PRESET                              *
+*******************************************************************
+
+Conversion OBJECT
+
+*******************************************************************
+
+Material KEYWORD_ON_TO_SHADER _COVERAGE_ON SHADER_DEFAULT_PROP
+Material KEYWORD_ON_TO_FLOAT _COVERAGE_ON _DetailMode 2
+Material KEYWORD_ON_TO_FLOAT _COVERAGE_ON _DetailTypeMode 1
+Material KEYWORD_ON_TO_FLOAT _COVERAGE_ON _DetailMaskMode 1
+Material KEYWORD_ON_TO_FLOAT _RenderClip 0
+
+Material COPY_COLOR _SurfaceColor _MainColor
+Material COPY_TEX _SurfaceAlbedo _MainAlbedoTex
+Material COPY_TEX _SurfaceNormal _MainNormalTex
+Material COPY_ST_AS_VECTOR _SurfaceAlbedo _MainUVs
+
+Material SET_FLOAT _MainNormalValue 1.5
+Material COPY_FLOAT _SurfaceSmoothness _MainSmoothnessValue
+
+Material COPY_COLOR _CoverageColor _SeconsColor
+Material COPY_TEX _CoverageAlbedo _SecondAlbedoTex
+Material COPY_TEX _CoverageNormal _SecondNormalTex
+
+Material SET_FLOAT _SecondNormalValue 1.5
+Material COPY_FLOAT _CoverageSmoothness _SecondSmoothnessValue
+
+Material SET_FLOAT _DetailNormalValue 1
+
+Material SET_FLOAT _DetailMeshValue 0
+Material SET_FLOAT _DetailMaskValue 0.2
+Material SET_FLOAT _DetailMaskContrast 0.49
+
+// Combine Texture
+Texture SecondMetallic NONE
+Texture SecondOcclusion NONE
+Texture SecondMask GET_GRAY _CoverageMask
+Texture SecondSmoothness NONE

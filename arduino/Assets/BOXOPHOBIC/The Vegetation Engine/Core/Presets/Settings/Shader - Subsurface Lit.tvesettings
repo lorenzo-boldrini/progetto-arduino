@@ -1,0 +1,6 @@
+Material SHADER_NAME_TO_SHADER_FIND Prop BOXOPHOBIC/The Vegetation Engine/Objects/Prop Standard Lit
+
+Material SHADER_NAME_TO_SHADER_FIND Cross BOXOPHOBIC/The Vegetation Engine/Vegetation/Cross Subsurface Lit
+Material SHADER_NAME_TO_SHADER_FIND Grass BOXOPHOBIC/The Vegetation Engine/Vegetation/Grass Subsurface Lit
+Material SHADER_NAME_TO_SHADER_FIND Bark BOXOPHOBIC/The Vegetation Engine/Vegetation/Bark Standard Lit
+Material SHADER_NAME_TO_SHADER_FIND Leaf BOXOPHOBIC/The Vegetation Engine/Vegetation/Leaf Subsurface Lit

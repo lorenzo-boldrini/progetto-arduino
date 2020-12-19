@@ -1,0 +1,56 @@
+*******************************************************************
+*                             INFO                                *
+*******************************************************************
+
+InfoTitle Nature Manufacture
+InfoPreset Use this preset to convert Nature Manufacture Grass (with Grass shaders). Variation is added automatically, but it might not work as expected! Set the Vertex Data to World for simple translation motion instead of bending!
+InfoStatus ● ● ● ● ○
+InfoOnline https://assetstore.unity.com/publishers/6887
+
+*******************************************************************
+*                             PRESET                              *
+*******************************************************************
+
+Conversion VEGETATION
+
+Mesh Variation GET_MASK_PROCEDURAL 3
+Mesh Occlusion GET_MASK_PROCEDURAL 12
+Mesh DetailMask NONE
+Mesh MultiMask NONE
+
+Mesh DetailCoord GET_COORD_PROCEDURAL 3
+
+Mesh Motion1 GET_MASK_PROCEDURAL 12
+Mesh Motion2 GET_MASK_PROCEDURAL 12
+Mesh Motion3 GET_MASK_PROCEDURAL 12
+
+*******************************************************************
+
+Include Use Default Grass Settings
+
+*******************************************************************
+
+// Set Material Shader
+Material SHADER_NAME_TO_SHADER Bark SHADER_DEFAULT_BARK
+
+// Disable Features for Bark
+Material SHADER_NAME_TO_FLOAT Bark _Motion_30 0
+Material SHADER_NAME_TO_FLOAT Bark _Motion_32 0
+Material SHADER_NAME_TO_FLOAT Bark _GlobalColors 0
+Material SHADER_NAME_TO_KEYWORD_OFF Bark _ALPHATEST_ON
+Material SHADER_NAME_TO_FLOAT Bark _RenderClip 0
+
+// Set Default values
+Material SET_FLOAT _RenderNormals 2
+
+// Copy material props
+Material COPY_COLOR _Color _MainColor
+Material COPY_COLOR _HealthyColor _MainColor
+Material COPY_COLOR _DryColor _MainColorVariation
+Material COPY_TEX _MainTex _MainAlbedoTex
+Material COPY_ST_AS_VECTOR _MainTex _MainUVs
+Material COPY_TEX _BumpMap _MainNormalTex
+Material COPY_FLOAT _BumpScale _MainNormalValue
+Material COPY_TEX _AmbientOcclusionG _MainMaskTex
+Material SET_FLOAT _MainSmoothnessValue 0.2
+Material COPY_FLOAT _AmbientOcclusionPower _MainOcclusionValue

@@ -1,0 +1,6 @@
+// Disable Features for Bark
+Material FLOAT_TO_SHADER _AlphaCutoffEnable 0 SHADER_DEFAULT_BARK
+Material FLOAT_TO_FLOAT _AlphaCutoffEnable 0 _Motion_30 0
+Material FLOAT_TO_FLOAT _AlphaCutoffEnable 0 _Motion_32 0
+Material FLOAT_TO_FLOAT _AlphaCutoffEnable 0 _GlobalColors 0
+Material FLOAT_TO_FLOAT _AlphaCutoffEnable 0 _RenderClip 0

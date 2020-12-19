@@ -1,0 +1,126 @@
+*******************************************************************
+*                             INFO                                *
+*******************************************************************
+
+InfoTitle Nature Manufacture
+InfoPreset Use this preset to convert URP/HDRP Nature Manufacture Trees, Bushes and Plants. Variation is not supported, use the Elasticity motion parameters instead!
+InfoStatus ● ● ● ● ○
+InfoOnline https://assetstore.unity.com/publishers/6887
+
+*******************************************************************
+*                             PRESET                              *
+*******************************************************************
+
+Conversion VEGETATION
+
+Mesh Variation GET_MASK_PROCEDURAL 3
+Mesh Occlusion GET_MASK_PROCEDURAL 7
+Mesh DetailMask NONE
+Mesh MultiMask NONE
+
+Mesh DetailCoord GET_COORD_3RD_PARTY 0
+
+Mesh Motion1 GET_MASK_PROCEDURAL 4
+Mesh Motion2 GET_MASK_3RD_PARTY 3
+Mesh Motion3 GET_MASK_3RD_PARTY 3
+
+*******************************************************************
+
+// Set Default values
+Material SET_FLOAT _GlobalSize 0
+Material SET_FLOAT _GlobalSizeFade 0
+
+*******************************************************************
+
+// Copy HDRP settings
+Material COPY_FLOAT _DoubleSidedNormalMode _RenderNormals
+Material FLOAT_TO_FLOAT _DoubleSidedEnable 1 _RenderCull 0
+Material COPY_FLOAT _DiffusionProfileHash _SubsurfaceDiffusion
+Material COPY_VECTOR _DiffusionProfileAsset _SubsurfaceDiffusion_asset
+
+*******************************************************************
+
+Material SHADER_NAME_TO_SHADER Bark SHADER_DEFAULT_BARK
+Material SHADER_NAME_TO_FLOAT Bark _Motion_20 0
+Material SHADER_NAME_TO_FLOAT Bark _Motion_30 0
+Material SHADER_NAME_TO_FLOAT Bark _Motion_32 0
+Material SHADER_NAME_TO_FLOAT Bark _GlobalColors 0
+Material SHADER_NAME_TO_FLOAT Bark _GlobalOverlay 0.5
+Material SHADER_NAME_TO_FLOAT Bark _RenderClip 0
+
+*******************************************************************
+
+//Enable Betail shading
+Material FLOAT_TO_FLOAT _BarkUseUV3 1 _DetailMode 2
+Material FLOAT_TO_FLOAT _BarkUseUV3 1 _DetailMaskMode 0
+
+// The proper way to use the Detail Mask as a lerp mask
+Material SET_FLOAT _DetailMaskValue 0
+Material SET_FLOAT _DetailMeshValue 0
+Material SET_FLOAT _DetailMaskContrast 0.75
+
+*******************************************************************
+
+// Copy Bark Pros
+Material COPY_COLOR _TrunkBaseColor _MainColor
+
+Material COPY_TEX _TrunkBaseColorMap _MainAlbedoTex
+Material COPY_VECTOR _TrunkTilingOffset _MainUVs
+
+Material COPY_TEX _TrunkNormalMap _MainNormalTex
+Material COPY_FLOAT _TrunkNormalScale _MainNormalValue
+
+Material COPY_TEX _TrunkMaskMap _MainMaskTex
+Material SET_FLOAT _MainMetallicValue 0.0
+Material SET_FLOAT _MainOcclusionValue 1
+Material SET_FLOAT _MainSmoothnessValue 0.0
+
+*******************************************************************
+
+// Copy Bark Base Props
+Material COPY_COLOR _BarkBaseColor _SecondColor
+
+Material COPY_TEX _BarkBaseColorMap _SecondAlbedoTex
+Material COPY_VECTOR _BarkTilingOffset _SecondUVs
+
+Material COPY_TEX _BarkNormalMap _SecondNormalTex
+Material COPY_FLOAT _BarkNormalScale _SecondNormalValue
+
+Material COPY_TEX _BarkMaskMap _SecondMaskTex
+Material SET_FLOAT _SecondMetallicValue 0.0
+Material SET_FLOAT _SecondOcclusionValue 1
+Material SET_FLOAT _SecondSmoothnessValue 0.5
+
+*******************************************************************
+
+// Copy Leaf Pros
+Material COPY_FLOAT _AlphaCutoff _Cutoff
+
+Material COPY_COLOR _HealthyColor _MainColor
+
+Material COPY_TEX _BaseColorMap _MainAlbedoTex
+Material COPY_VECTOR _Tiling_and_Offset _MainUVs
+
+Material COPY_TEX _NormalMap _MainNormalTex
+
+Material COPY_TEX _MaskMap _MainMaskTex
+Material SET_FLOAT _MainMetallicValue 0.0
+Material SET_FLOAT _MainOcclusionValue 1
+Material SET_FLOAT _MainSmoothnessValue 1
+
+*******************************************************************
+
+// Set Billboard shaders
+Material SHADER_NAME_TO_SHADER Cross SHADER_DEFAULT_CROSS
+Material SHADER_NAME_TO_FLOAT Cross _RenderCull 1
+Material SHADER_NAME_TO_FLOAT Cross _SubsurfaceValue 0
+
+*******************************************************************
+
+// Combine Texture Channels
+Texture MainMetallic GET_RED _TrunkMaskMap
+Texture MainOcclusion GET_GREEN _TrunkMaskMap
+Texture MainMask GET_GREEN _LayerMask
+Texture MainSmoothness GET_ALPHA _TrunkMaskMap
+
+

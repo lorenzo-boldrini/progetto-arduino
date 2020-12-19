@@ -1,0 +1,73 @@
+*******************************************************************
+*                             INFO                                *
+*******************************************************************
+
+InfoTitle Advanced Dynamic Shaders
+InfoPreset TVE will fully convert the meshes and will assign the textures, but some material properties will need to be set manually!
+InfoStatus ○ ○ ○ ○ ○
+InfoOnline https://assetstore.unity.com/publishers/20529
+
+*******************************************************************
+*                             PRESET                              *
+*******************************************************************
+
+Conversion VEGETATION
+
+// Set Mesh Masks
+Mesh Variation GET_MASK_FROM_CHANNEL 3
+Mesh Occlusion GET_MASK_FROM_CHANNEL 6
+Mesh DetailMask GET_MASK_PROCEDURAL 8
+Mesh MultiMask NONE
+
+Mesh DetailCoord GET_COORD_FROM_CHANNEL 3
+
+Mesh Motion1 GET_MASK_FROM_CHANNEL 0
+Mesh Motion2 GET_MASK_FROM_CHANNEL 1
+Mesh Motion3 GET_MASK_FROM_CHANNEL 2
+
+*******************************************************************
+
+// Set Material Shader
+Material SHADER_NAME_TO_SHADER Bark SHADER_DEFAULT_BARK
+Material SHADER_NAME_TO_SHADER Leaf SHADER_DEFAULT_LEAF
+
+Material HAS_PROP_TO_KEYWORD_OFF _EnableBase _ALPHATEST_ON
+Material HAS_PROP_TO_FLOAT _EnableBase _RenderClip 0
+
+Material KEYWORD_ON_TO_KEYWORD_ON _ENABLEBASE_ON _DETAIL_HEIGHT
+Material KEYWORD_ON_TO_FLOAT _ENABLEBASE_ON _DetailMode 2
+
+// Disable Features for Bark
+Material HAS_PROP_TO_FLOAT _EnableBase _UseMotion_Leaves 0
+Material HAS_PROP_TO_FLOAT _EnableBase _GlobalColors 0
+
+Material SET_FLOAT _GlobalSize 0
+Material SET_FLOAT _GlobalSizeFade 0
+
+// Copy Material Properties
+Material COPY_COLOR _Color _MainColor
+Material COPY_COLOR _Color _MainColorVariation
+Material COPY_TEX _AlbedoTex _MainAlbedoTex
+Material COPY_VECTOR _UVZero _MainUVs
+Material COPY_TEX _NormalTex _MainNormalTex
+Material COPY_FLOAT _NormalScale _MainNormalValue
+Material COPY_TEX _SurfaceTex _MainMaskTex
+Material SET_FLOAT _MainMetallicValue 0
+Material COPY_FLOAT _Smoothness _MainSmoothnessValue
+Material COPY_FLOAT _Occlusion _MainOcclusionValue
+
+Material COPY_COLOR _Color3 _SecondColor
+Material COPY_TEX _AlbedoTex3 _SecondAlbedoTex
+Material COPY_VECTOR _UVZero3 _SecondUVs
+Material COPY_TEX _NormalTex3 _SecondNormalTex
+Material COPY_FLOAT _NormalScale3 _SecondNormalValue
+Material COPY_TEX _SurfaceTex3 _SecondMaskTex
+Material SET_FLOAT _SecondMetallicValue 0
+Material COPY_FLOAT _Smoothness3 _SecondSmoothnessValue
+Material COPY_FLOAT _Occlusion3 _SecondOcclusionValue
+
+// Combine Texture Channels
+Texture MainMetallic NONE
+Texture MainOcclusion GET_GREEN _SurfaceTex
+Texture MainMask GET_ALPHA _AlbedoTex
+Texture MainSmoothness GET_ALPHA _SurfaceTex

@@ -1,0 +1,37 @@
+*******************************************************************
+*                             INFO                                *
+*******************************************************************
+
+InfoTitle Procedural
+InfoPreset Use this preset to convert Tree objects. The conversion might not work as expected! Disable the Leaave Motion on the bark materials! The preset will convert the materials only if the Standard/Lit shaders are used!
+InfoStatus ● ● ● ○ ○
+InfoOnline https://docs.google.com/document/d/145JOVlJ1tE-WODW45YoJ6Ixg23mFc56EnB_8Tbwloz8/edit#heading=h.1fsztsnbzbgj
+
+*******************************************************************
+*                             PRESET                              *
+*******************************************************************
+
+Conversion VEGETATION
+
+Mesh Variation GET_MASK_PROCEDURAL 3
+Mesh Occlusion GET_MASK_PROCEDURAL 7
+Mesh DetailMask GET_MASK_PROCEDURAL 8
+Mesh MultiMask NONE
+
+Mesh DetailCoord GET_COORD_FROM_CHANNEL 0
+
+Mesh Motion1 GET_MASK_PROCEDURAL 4
+Mesh Motion2 GET_MASK_PROCEDURAL 7
+Mesh Motion3 GET_MASK_FROM_CHANNEL 5
+
+*******************************************************************
+
+// Enable Material Features
+Material SET_FLOAT _GlobalSize 0
+Material SET_FLOAT _GlobalSizeFade 0
+
+// Include Unity Default Features
+Include Bark by RenderType
+Include Bark by HD Clip Settings
+Include Unity Lit Commons
+Include Unity Lit Packer

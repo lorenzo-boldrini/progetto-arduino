@@ -1,0 +1,31 @@
+*******************************************************************
+*                             INFO                                *
+*******************************************************************
+
+InfoTitle Speedtree 8
+InfoPreset Use this preset to convert Speedtree 8 vegetation. Speedtree assets can not be converted directly, you will need to create a new prefab first! 
+InfoStatus ● ● ● ● ●
+InfoOnline https://assetstore.unity.com/publishers/9474
+
+*******************************************************************
+*                             PRESET                              *
+*******************************************************************
+
+Conversion VEGETATION
+
+Mesh Variation GET_MASK_FROM_CHANNEL 7 ACTION_REMAP01
+Mesh Occlusion GET_MASK_FROM_CHANNEL 0
+Mesh DetailMask GET_MASK_PROCEDURAL 8
+Mesh MultiMask NONE
+
+Mesh DetailCoord GET_COORD_FROM_CHANNEL 0
+
+Mesh Motion1 GET_MASK_PROCEDURAL 4
+Mesh Motion2 GET_MASK_FROM_CHANNEL 6
+Mesh Motion3 GET_MASK_3RD_PARTY 2
+
+*******************************************************************
+
+Include SpeedTree Commons HDRP Setup
+
+Material SET_COLOR _SubsurfaceColor 0.33 0.50 0 0

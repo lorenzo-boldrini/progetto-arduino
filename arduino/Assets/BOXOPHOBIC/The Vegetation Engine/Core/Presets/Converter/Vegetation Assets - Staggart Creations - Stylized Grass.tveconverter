@@ -1,0 +1,47 @@
+*******************************************************************
+*                             INFO                                *
+*******************************************************************
+
+InfoTitle Staggart Creations 
+InfoPreset Use this preset to convert Staggart Creations' stylized grass meshes. Set the Vertex Data to World for simple translation motion instead of bending!
+InfoStatus ● ● ● ● ●
+InfoOnline https://assetstore.unity.com/packages/vfx/shaders/stylized-grass-shader-143830
+
+*******************************************************************
+*                             PRESET                              *
+*******************************************************************
+
+Conversion VEGETATION
+
+Mesh Variation GET_MASK_PROCEDURAL 3
+Mesh Occlusion GET_MASK_PROCEDURAL 4
+Mesh DetailMask NONE
+Mesh MultiMask NONE
+
+Mesh DetailCoord GET_COORD_PROCEDURAL 3
+
+Mesh Motion1 GET_MASK_PROCEDURAL 4
+Mesh Motion2 GET_MASK_PROCEDURAL 4
+Mesh Motion3 GET_MASK_PROCEDURAL 4
+
+*******************************************************************
+
+Include Default Grass Settings
+
+*******************************************************************
+
+//Set properties
+Material SET_FLOAT _RenderNormals 2
+Material SET_FLOAT _VertexOcclusionValue 0.5
+Material SET_COLOR _VertexOcclusionColor 0.1 0.2 0.4 1.0
+Material SET_COLOR _MotionHighlightColor 3 4 0.5 1.0
+Material SET_FLOAT _MainSmoothnessValue 0.2
+
+//Copy properties
+Material COPY_TEX _BaseMap _MainAlbedoTex
+Material COPY_ST_AS_VECTOR _BaseMap _MainUVs
+Material COPY_TEX _BumpMap _MainNormalTex
+
+Material COPY_COLOR _BaseColor _MainColor
+Material COPY_COLOR _BaseColor _SubsurfaceColor
+

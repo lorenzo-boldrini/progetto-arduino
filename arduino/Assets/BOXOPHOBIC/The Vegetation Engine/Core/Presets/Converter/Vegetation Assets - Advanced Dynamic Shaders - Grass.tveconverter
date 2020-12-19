@@ -1,0 +1,50 @@
+*******************************************************************
+*                             INFO                                *
+*******************************************************************
+
+InfoTitle Advanced Dynamic Shaders
+InfoPreset TVE will fully convert the meshes and will assign the textures, but some material properties will need to be set manually! Set the Vertex Data to World for simple translation motion instead of bending!
+InfoStatus ○ ○ ○ ○ ○
+InfoOnline https://assetstore.unity.com/publishers/20529
+
+*******************************************************************
+*                             PRESET                              *
+*******************************************************************
+
+Conversion VEGETATION
+
+// Set Mesh Masks
+Mesh Variation GET_MASK_FROM_CHANNEL 3
+Mesh Occlusion GET_MASK_FROM_CHANNEL 6
+Mesh DetailMask NONE
+Mesh MultiMask NONE
+
+Mesh DetailCoord GET_COORD_PROCEDURAL 3
+
+Mesh Motion1 GET_MASK_FROM_CHANNEL 0
+Mesh Motion2 GET_MASK_FROM_CHANNEL 0
+Mesh Motion3 GET_MASK_FROM_CHANNEL 0
+
+*******************************************************************
+
+Include Use Default Grass Settings
+
+*******************************************************************
+
+// Copy Material Properties
+Material COPY_FLOAT _RenderFaces _RenderCull
+Material COPY_FLOAT _NormalInvertOnBackface _RenderNormals
+
+Material COPY_COLOR _SubsurfaceColor _SubsurfaceColor
+
+Material COPY_COLOR _Color _MainColor
+Material COPY_COLOR _Color _MainColorVariation
+Material COPY_TEX _AlbedoTex _MainAlbedoTex
+Material COPY_VECTOR _UVZero _MainUVs
+Material COPY_TEX _NormalTex _MainNormalTex
+Material COPY_FLOAT _NormalScale _MainNormalValue
+Material COPY_TEX _SurfaceTex _MainMaskTex
+Material SET_FLOAT _MainMetallicValue 0
+Material COPY_FLOAT _Smoothness _MainSmoothnessValue
+Material COPY_FLOAT _Occlusion _MainOcclusionValue
+

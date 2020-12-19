@@ -1,0 +1,46 @@
+Conversion DYNAMIC
+
+Mesh Variation GET_MASK_FROM_CHANNEL 0
+Mesh Occlusion GET_MASK_FROM_CHANNEL 3
+Mesh DetailMask GET_MASK_PROCEDURAL 8
+Mesh MultiMask NONE
+
+Mesh DetailCoord GET_COORD_FROM_CHANNEL 0
+
+Mesh Motion1 GET_MASK_PROCEDURAL 4
+Mesh Motion2 GET_MASK_FROM_CHANNEL 9
+Mesh Motion3 GET_MASK_FROM_CHANNEL 5
+
+*******************************************************************
+
+// Set Material Shader
+Material SHADER_NAME_TO_SHADER Bark SHADER_DEFAULT_BARK
+
+// Disable Features for Bark
+Material SHADER_NAME_TO_FLOAT Bark _Motion_30 0
+Material SHADER_NAME_TO_FLOAT Bark _Motion_32 0
+Material SHADER_NAME_TO_FLOAT Bark _RenderClip 0
+
+// Disable Size for trees
+Material SET_FLOAT _GlobalSize 0
+Material SET_FLOAT _GlobalSizeFade 0
+
+Material SET_FLOAT _RenderCull 2
+Material SET_FLOAT _VertexOcclusionValue 2.0
+Material SHADER_NAME_TO_FLOAT Fast _MainSmoothnessValue 0.0
+
+// Copy material props
+Material COPY_COLOR _TranslucencyColor _SubsurfaceColor
+
+Material COPY_COLOR _Color _MainColor
+Material COPY_TEX _MainTex _MainAlbedoTex
+Material COPY_ST_AS_VECTOR _MainTex _MainUVs
+Material COPY_TEX _BumpSpecMap _MainNormalTex
+
+*******************************************************************
+
+// Combine Texture Channels
+Texture MainMetallic NONE
+Texture MainOcclusion NONE
+Texture MainMask GET_BLUE _TranslucencyMap
+Texture MainSmoothness GET_ALPHA _TranslucencyMap

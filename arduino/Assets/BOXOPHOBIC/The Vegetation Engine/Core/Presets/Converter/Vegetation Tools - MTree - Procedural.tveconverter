@@ -1,0 +1,60 @@
+*******************************************************************
+*                             INFO                                *
+*******************************************************************
+
+InfoTitle MTree
+InfoPreset Use this preset to convert MTree assets. MTree is in preview mode, better motion quality will come with future updates! MTree assets must be saved as prefabs to be able to convert them.
+InfoStatus ● ● ● ● ○
+InfoOnline https://assetstore.unity.com/packages/tools/modeling/mtree-tree-creation-132433
+
+*******************************************************************
+*                             PRESET                              *
+*******************************************************************
+
+Conversion VEGETATION
+
+// Set Mesh Masks
+Mesh Variation GET_MASK_FROM_CHANNEL 1
+Mesh Occlusion GET_MASK_FROM_CHANNEL 3
+Mesh DetailMask GET_MASK_PROCEDURAL 8
+Mesh MultiMask NONE
+
+Mesh DetailCoord GET_COORD_FROM_CHANNEL 0
+
+Mesh Motion1 GET_MASK_PROCEDURAL 4 
+Mesh Motion2 GET_MASK_FROM_CHANNEL 2
+Mesh Motion3 GET_MASK_FROM_CHANNEL 2
+
+*******************************************************************
+
+// Copy Material Properties
+Material COPY_COLOR _Color _MainColor
+Material COPY_TEX _MainTex _MainAlbedoTex
+Material COPY_ST_AS_VECTOR _MainTex _MainUVs
+
+Material COPY_TEX _BumpMap _MainNormalTex
+Material COPY_FLOAT _BumpScale _MainNormalValue
+
+Material COPY_FLOAT _Metallic _MainMetallicValue
+Material COPY_FLOAT _Glossiness _MainSmoothnessValue
+Material SET_FLOAT _VertexOcclusionValue 0.1
+
+Material COPY_FLOAT _CullMode _RenderCull
+Material COPY_FLOAT _DoubleSidedNormalMode _RenderNormals
+
+Material SET_COLOR _SubsurfaceColor 0.33 0.50 0 0
+
+*******************************************************************
+
+// Set Bark Settings
+Material SHADER_NAME_TO_SHADER Bark SHADER_DEFAULT_BARK
+Material SHADER_NAME_TO_FLOAT Bark _Motion_20 0
+Material SHADER_NAME_TO_FLOAT Bark _Motion_30 0
+Material SHADER_NAME_TO_FLOAT Bark _Motion_32 0
+Material SHADER_NAME_TO_FLOAT Bark _RenderClip 0
+
+
+*******************************************************************
+
+// Set Billboard Settings
+Material SHADER_NAME_TO_SHADER Billboard SHADER_DEFAULT_CROSS

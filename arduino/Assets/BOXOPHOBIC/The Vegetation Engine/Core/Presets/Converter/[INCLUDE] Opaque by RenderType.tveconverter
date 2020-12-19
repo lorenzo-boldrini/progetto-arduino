@@ -1,0 +1,3 @@
+// Disable Features for Opaque
+Material RENDERTYPE_TAG_TO_SHADER Opaque SHADER_DEFAULT_BARK
+Material RENDERTYPE_TAG_TO_FLOAT Opaque _RenderClip 0

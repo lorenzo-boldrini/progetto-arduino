@@ -1,0 +1,20 @@
+*******************************************************************
+*                             INFO                                *
+*******************************************************************
+
+InfoTitle Polyverse Wind
+InfoPreset This preset outputs a mesh compatible with the Polyverse Wind shader. Make sure you don't have the Polyverse Prop attached to the prefab before conversion and you don't add it after! The converted mesh already contains all the masks used for wind and gradient. The Polyverse Prop Standard Lit shader will be assigned after conversion.
+InfoStatus ● ● ● ● ●
+InfoOnline https://assetstore.unity.com/packages/vfx/shaders/polyverse-wind-low-poly-wind-shaders-115146
+
+*******************************************************************
+*                             PRESET                              *
+*******************************************************************
+
+
+Conversion POLYVERSE
+
+*******************************************************************
+
+// Set Material
+Material SET_SHADER_BY_NAME BOXOPHOBIC/Polyverse Wind/Standard Lit

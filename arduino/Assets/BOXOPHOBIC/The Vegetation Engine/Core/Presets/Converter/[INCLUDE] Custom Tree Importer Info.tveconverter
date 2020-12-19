@@ -1,0 +1,2 @@
+InfoPreset Use this preset to convert vegetation powered by CTI. CTI uses an unpacked normal map (green), make sure you uncheck sRGB for it to work correctly. Texture Arrays and Billboards are not supported!
+InfoStatus ● ● ● ● ○

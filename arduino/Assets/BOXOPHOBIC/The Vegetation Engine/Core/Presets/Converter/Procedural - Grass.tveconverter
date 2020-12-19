@@ -1,0 +1,32 @@
+*******************************************************************
+*                             INFO                                *
+*******************************************************************
+
+InfoTitle Procedural
+InfoPreset Use this preset to convert Grass objects. Add variation for better motion quality. Procedural conversion might not work as expected! The preset will convert the materials only if the Standard/Lit shaders are used! Set the Vertex Data to World for simple translation motion instead of bending!
+InfoStatus ● ● ● ● ●
+InfoOnline https://docs.google.com/document/d/145JOVlJ1tE-WODW45YoJ6Ixg23mFc56EnB_8Tbwloz8/edit#heading=h.1fsztsnbzbgj
+
+*******************************************************************
+*                             PRESET                              *
+*******************************************************************
+
+Conversion VEGETATION
+
+Mesh Variation GET_MASK_PROCEDURAL 3
+Mesh Occlusion GET_MASK_PROCEDURAL 12
+Mesh DetailMask NONE
+Mesh MultiMask NONE
+
+Mesh DetailCoord GET_COORD_PROCEDURAL 3
+
+Mesh Motion1 GET_MASK_PROCEDURAL 12
+Mesh Motion2 GET_MASK_PROCEDURAL 12
+Mesh Motion3 GET_MASK_PROCEDURAL 12
+
+*******************************************************************
+
+// Include Unity Default Features
+Include Unity Lit Commons
+Include Unity Lit Packer
+Include Use Default Grass Settings

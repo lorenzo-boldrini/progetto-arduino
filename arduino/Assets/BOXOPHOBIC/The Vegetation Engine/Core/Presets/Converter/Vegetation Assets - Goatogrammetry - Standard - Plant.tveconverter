@@ -1,0 +1,64 @@
+*******************************************************************
+*                             INFO                                *
+*******************************************************************
+
+InfoTitle Goatogrammetry
+InfoPreset Use this preset to convert Goatogrammetry Castle Valley plants.
+InfoStatus ● ● ● ● ●
+https://assetstore.unity.com/publishers/47093
+
+*******************************************************************
+*                             PRESET                              *
+*******************************************************************
+
+Conversion VEGETATION
+
+Mesh Variation GET_MASK_PROCEDURAL 3
+Mesh Occlusion GET_MASK_FROM_CHANNEL 5
+Mesh DetailMask NONE
+Mesh MultiMask NONE
+
+Mesh DetailCoord NONE
+
+Mesh Motion1 GET_MASK_PROCEDURAL 4
+Mesh Motion2 GET_MASK_FROM_CHANNEL 5
+Mesh Motion3 GET_MASK_FROM_CHANNEL 5
+
+*******************************************************************
+
+// Preset Default Settings
+Material SET_FLOAT _GlobalSize 0
+Material SET_FLOAT _RenderCull 2
+Material SET_COLOR _SubsurfaceColor 0.75 0.5 0.25 0
+
+Material COPY_COLOR _Tint _MainColor
+Material COPY_TEX _Albedo _MainAlbedoTex
+Material COPY_TEX _Normals _MainNormalTex
+Material COPY_TEX _Occlusion _MainMaskTex
+Material COPY_FLOAT _Roughness _MainSmoothnessValue
+Material COPY_FLOAT _Metallic _MainMetallicValue
+Material COPY_ST_AS_VECTOR _Albedo _MainUVs
+
+*******************************************************************
+
+Condition SHADER_NAME_TO_BREAK Amplify
+
+*******************************************************************
+
+// Include Unity Default Features
+Include Bark by RenderType
+Include Bark by HD Clip Settings
+Include Unity Lit Commons
+
+// Combine Texture Channels
+Texture MainMetallic NONE
+Texture MainOcclusion GET_GRAY _OcclusionMap
+Texture MainMask NONE
+Texture MainSmoothness GET_ALPHA _MainTex
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+// Combine Texture Channels fot Standard
+Texture MainMetallic GET_RED _MetallicGlossMap
+Texture MainOcclusion GET_GRAY _OcclusionMap
+Texture MainMask GET_GRAY _ParallaxMap
+Texture MainMask GET_GRAY _DetailMask
+Texture MainSmoothness GET_ALPHA _MetallicGlossMap
+
+// Combine Texture Channels fot HD
+Texture MainMetallic GET_RED _MaskMap
+Texture MainOcclusion GET_GREEN _MaskMap
+Texture MainMask GET_GRAY _ThicknessMap
+Texture MainSmoothness GET_ALPHA _MaskMap

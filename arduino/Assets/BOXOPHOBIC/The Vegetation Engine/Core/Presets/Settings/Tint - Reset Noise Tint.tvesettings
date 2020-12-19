@@ -1,0 +1,5 @@
+Material SET_COLOR _NoiseTintOne 1 1 1 1
+Material SET_COLOR _NoiseTintTwo 1 1 1 1
+Material SET_FLOAT _NoiseMinValue 0
+Material SET_FLOAT _NoiseMaxValue 1
+Material SET_FLOAT _NoiseScaleValue 0.2
