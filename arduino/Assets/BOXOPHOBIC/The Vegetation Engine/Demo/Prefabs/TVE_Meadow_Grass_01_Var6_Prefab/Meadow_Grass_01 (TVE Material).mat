@@ -455,7 +455,7 @@ Material:
     - _GradientCat: 0
     - _GradientHeightMaxValue: 1
     - _GradientHeightMinValue: 0
-    - _GradientMaxValue: 1
+    - _GradientMaxValue: 0.138
     - _GradientMinValue: 0
     - _GrassPerspectiveAngleValue: 0
     - _GrassPerspectiveNoiseValue: 0
@@ -691,7 +691,7 @@ Material:
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
     - _GradientColorOne: {r: 1, g: 1, b: 1, a: 1}
-    - _GradientColorTwo: {r: 1, g: 1, b: 1, a: 1}
+    - _GradientColorTwo: {r: 0.15430018, g: 0.8, b: 0.09411764, a: 1}
     - _ImposterOffset: {r: 0.5, g: 0, b: 0, a: 0}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
@@ -699,7 +699,7 @@ Material:
     - _MainColor: {r: 1, g: 1, b: 1, a: 1}
     - _MainUVs: {r: 1, g: 1, b: 0, a: 0}
     - _MaxBoundsInfo: {r: 4.124504, g: 0.6932245, b: 4.124504, a: 0}
-    - _MotionHighlightColor: {r: 2.5882354, g: 2.9960785, b: 0.8, a: 1}
+    - _MotionHighlightColor: {r: 3.825454, g: 3.8490567, b: 3.7219653, a: 1}
     - _NoiseTintOne: {r: 1, g: 1, b: 1, a: 1}
     - _NoiseTintTwo: {r: 1, g: 1, b: 1, a: 1}
     - _PeeledBarkColor: {r: 1, g: 1, b: 1, a: 1}
