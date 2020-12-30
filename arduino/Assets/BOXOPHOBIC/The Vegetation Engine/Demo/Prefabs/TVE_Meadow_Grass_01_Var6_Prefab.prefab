@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4487488506127532}
   - component: {fileID: 33278957127677974}
   - component: {fileID: 23454455180311424}
-  m_Layer: 21
+  m_Layer: 8
   m_Name: Meadow_Grass_01_Var6_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,6 +54,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -65,6 +67,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 0
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -77,6 +80,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1377032641787058
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,7 +92,7 @@ GameObject:
   - component: {fileID: 4431149469306348}
   - component: {fileID: 33828538445880820}
   - component: {fileID: 23015165418412434}
-  m_Layer: 21
+  m_Layer: 8
   m_Name: Meadow_Grass_01_Var6_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,6 +135,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -142,6 +148,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 0
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -154,6 +161,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1997880846982194
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +173,7 @@ GameObject:
   - component: {fileID: 4302059575617914}
   - component: {fileID: 205609898309392298}
   - component: {fileID: 318364924540967176}
-  m_Layer: 21
+  m_Layer: 8
   m_Name: TVE_Meadow_Grass_01_Var6_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +232,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   styledBanner: 0
-  storedPrefabBackup: {fileID: 1997880846982194, guid: f1688914e75495345b9a81b12be1e4f2,
-    type: 3}
+  storedPrefabBackup: {fileID: 1997880846982194, guid: f1688914e75495345b9a81b12be1e4f2, type: 3}
   storedMaxBoundsInfo: {x: 4.124504, y: 0.6932245, z: 4.124504, w: 0}
   storedPreset: Vegetation Assets/The Vegetation Engine/Demo Grass
