@@ -466,7 +466,7 @@ Material:
     - _GlobalLeaves: 1
     - _GlobalOverlay: 1
     - _GlobalSize: 1
-    - _GlobalSizeFade: 0
+    - _GlobalSizeFade: 1
     - _GlobalSpace: 0
     - _GlobalWetness: 1
     - _GlossMapScale: 1

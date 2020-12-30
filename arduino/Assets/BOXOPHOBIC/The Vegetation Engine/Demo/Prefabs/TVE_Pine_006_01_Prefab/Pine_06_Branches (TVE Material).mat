@@ -449,8 +449,8 @@ Material:
     - _GlobalHealthiness: 0
     - _GlobalLeaves: 0
     - _GlobalOverlay: 1
-    - _GlobalSize: 0
-    - _GlobalSizeFade: 0
+    - _GlobalSize: 1
+    - _GlobalSizeFade: 1
     - _GlobalSpace: 0
     - _GlobalSubsurface: 1
     - _GlobalWetness: 1
