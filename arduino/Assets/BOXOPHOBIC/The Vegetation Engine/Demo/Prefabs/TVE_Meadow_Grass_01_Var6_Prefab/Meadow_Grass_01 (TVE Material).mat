@@ -496,7 +496,7 @@ Material:
     - _LocalSize: 1
     - _LocalSpace: 0
     - _MainCat: 0
-    - _MainMaskMaxValue: 0
+    - _MainMaskMaxValue: 1
     - _MainMaskMinValue: 0
     - _MainMessage: 0
     - _MainMetallicValue: 0

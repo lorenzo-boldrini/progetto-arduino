@@ -18,6 +18,8 @@ public class generatore_mondo : MonoBehaviour
     public int counterPos = 1;
     float DistanceCounter;
 
+    public GameObject[] obstacle;
+    public float PosXObstacle;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +34,10 @@ public class generatore_mondo : MonoBehaviour
         if(counter < 10)
         {
             DistanceCounter = distance * counterPos;
-            Instantiate(bioma1[IndiceRandomico],new Vector3(0, 0, DistanceCounter), Quaternion.identity);
+            Vector3 distance_pos = new Vector3(0, 0, DistanceCounter);
+            Instantiate(bioma1[IndiceRandomico],distance_pos, Quaternion.identity);
             timer = 0;
+            generate_obstacle(distance_pos);
             counter++;
             counterPos++;
         }
@@ -53,5 +57,13 @@ public class generatore_mondo : MonoBehaviour
             counter++;
             counterPos++;
         }
+    }
+
+
+    void generate_obstacle(Vector3 posizione_base)
+    {
+        posizione_base = posizione_base + new Vector3(Random.Range(-PosXObstacle,PosXObstacle), 0.7f, 0);
+        
+        Instantiate(obstacle[Random.Range(0, obstacle.Length)], posizione_base, Quaternion.identity);
     }
 }
