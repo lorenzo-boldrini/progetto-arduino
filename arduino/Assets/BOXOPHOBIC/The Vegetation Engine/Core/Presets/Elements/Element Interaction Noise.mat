@@ -83,6 +83,7 @@ Material:
     - _Intensity: 1
     - _InvertX: 0
     - _InvertY: 0
+    - _IsElementShader: 1
     - _IsMotionShader: 1
     - _IsStandardPipeline: 0
     - _IsTVEElement: 1

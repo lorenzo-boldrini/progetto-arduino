@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4881073129422474}
   - component: {fileID: 205329961687919748}
   - component: {fileID: 4716242718075365813}
-  m_Layer: 22
+  m_Layer: 8
   m_Name: TVE_Fern_var03_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,8 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   styledBanner: 0
-  storedPrefabBackup: {fileID: 1055727018099338, guid: 15f4ffe4e57e4da19d66679b550735a8,
-    type: 3}
+  storedPrefabBackup: {fileID: 1055727018099338, guid: 15f4ffe4e57e4da19d66679b550735a8, type: 3}
   storedMaxBoundsInfo: {x: 1.5089474, y: 0.91847914, z: 1.5089474, w: 0}
   storedPreset: Vegetation Assets/The Vegetation Engine/Demo Fern
 --- !u!1 &1193325950112690
@@ -90,7 +89,7 @@ GameObject:
   - component: {fileID: 4568588207117856}
   - component: {fileID: 33069113719995530}
   - component: {fileID: 23902751934209644}
-  m_Layer: 22
+  m_Layer: 8
   m_Name: Fern_Var3_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,6 +132,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -144,6 +145,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 0
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -156,6 +158,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1486753561181244
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +171,7 @@ GameObject:
   - component: {fileID: 33125384641822066}
   - component: {fileID: 23502313384024998}
   - component: {fileID: 5685833504288298419}
-  m_Layer: 22
+  m_Layer: 8
   m_Name: Fern_Var3_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,6 +214,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -222,6 +227,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 0
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -234,6 +240,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &5685833504288298419
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -244,9 +251,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 0
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 0}
 --- !u!1 &1561445524583756
 GameObject:
@@ -259,7 +266,7 @@ GameObject:
   - component: {fileID: 4056922146107204}
   - component: {fileID: 33562099697874406}
   - component: {fileID: 23101331835621484}
-  m_Layer: 22
+  m_Layer: 8
   m_Name: Fern_Var3_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,6 +309,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -313,6 +322,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -325,3 +335,4 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
