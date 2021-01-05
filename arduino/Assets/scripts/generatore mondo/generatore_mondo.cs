@@ -20,6 +20,7 @@ public class generatore_mondo : MonoBehaviour
 
     public GameObject[] obstacle;
     public float PosXObstacle;
+    public bool obstacleActive;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,8 +63,11 @@ public class generatore_mondo : MonoBehaviour
 
     void generate_obstacle(Vector3 posizione_base)
     {
-        posizione_base = posizione_base + new Vector3(Random.Range(-PosXObstacle,PosXObstacle), 0.7f, 0);
-        
-        Instantiate(obstacle[Random.Range(0, obstacle.Length)], posizione_base, Quaternion.identity);
+        if (obstacleActive)
+        {
+            posizione_base = posizione_base + new Vector3(Random.Range(-PosXObstacle, PosXObstacle), 0.7f, 0);
+
+            Instantiate(obstacle[Random.Range(0, obstacle.Length)], posizione_base, Quaternion.identity);
+        }
     }
 }
