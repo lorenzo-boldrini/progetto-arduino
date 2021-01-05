@@ -9,7 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4319473940614850536, guid: 13cbd7bf34923914cb42848b4a1e8db0, type: 3}
       propertyPath: m_Name
-      value: Old Chapel Arch_sboft_3d
+      value: Old Chapel Arch_sboft_3d Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319473940614850536, guid: 13cbd7bf34923914cb42848b4a1e8db0, type: 3}
+      propertyPath: m_TagString
+      value: Ostacolizzatore
       objectReference: {fileID: 0}
     - target: {fileID: 7058315951677322029, guid: 13cbd7bf34923914cb42848b4a1e8db0, type: 3}
       propertyPath: m_RootOrder
@@ -17,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7058315951677322029, guid: 13cbd7bf34923914cb42848b4a1e8db0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7058315951677322029, guid: 13cbd7bf34923914cb42848b4a1e8db0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -25,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7058315951677322029, guid: 13cbd7bf34923914cb42848b4a1e8db0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.31
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7058315951677322029, guid: 13cbd7bf34923914cb42848b4a1e8db0, type: 3}
       propertyPath: m_LocalRotation.w

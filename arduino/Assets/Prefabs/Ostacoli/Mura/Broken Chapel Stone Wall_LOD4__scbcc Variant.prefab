@@ -13,15 +13,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3d4acda83268c854f9d805cc05ac55ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 39.50223
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3d4acda83268c854f9d805cc05ac55ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.26
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3d4acda83268c854f9d805cc05ac55ed, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 49.6302
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3d4acda83268c854f9d805cc05ac55ed, type: 3}
       propertyPath: m_LocalRotation.w
@@ -57,7 +57,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: aa67a2503694e654baab4a0303916159, type: 2}
     - target: {fileID: 919132149155446097, guid: 3d4acda83268c854f9d805cc05ac55ed, type: 3}
       propertyPath: m_Name
-      value: Broken Chapel Stone Wall_LOD4__scbcc
+      value: Broken Chapel Stone Wall_LOD4__scbcc Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3d4acda83268c854f9d805cc05ac55ed, type: 3}
+      propertyPath: m_TagString
+      value: Ostacolizzatore
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d4acda83268c854f9d805cc05ac55ed, type: 3}

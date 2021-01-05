@@ -57,7 +57,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 6729ec2432a950e4bb3f1ece0f1010da, type: 2}
     - target: {fileID: 919132149155446097, guid: 06587a47b8c137a42ad2a62d2b65fb90, type: 3}
       propertyPath: m_Name
-      value: Tree Branch_LOD0__phyrG
+      value: Tree Branch_LOD0__phyrG Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 06587a47b8c137a42ad2a62d2b65fb90, type: 3}
+      propertyPath: m_TagString
+      value: Ostacolizzatore
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06587a47b8c137a42ad2a62d2b65fb90, type: 3}

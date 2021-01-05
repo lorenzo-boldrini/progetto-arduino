@@ -57,7 +57,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b7db5a412f5f7ab41b5ce4f707ab22bd, type: 2}
     - target: {fileID: 919132149155446097, guid: 520ad727d570a424a99f244a4f6b17c6, type: 3}
       propertyPath: m_Name
-      value: Roman Broken Column_LOD2__tk4tfgzfa
+      value: Roman Broken Column_LOD2__tk4tfgzfa Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520ad727d570a424a99f244a4f6b17c6, type: 3}
+      propertyPath: m_TagString
+      value: Ostacolizzatore
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520ad727d570a424a99f244a4f6b17c6, type: 3}
