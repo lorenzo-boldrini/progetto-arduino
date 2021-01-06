@@ -30,10 +30,10 @@ public class generatore_mondo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int IndiceRandomico = Random.Range(0, bioma1.Length);
         timer += 1 * Time.deltaTime;
         if(counter < 10)
         {
+            int IndiceRandomico = Random.Range(0, bioma1.Length);
             DistanceCounter = distance * counterPos;
             Vector3 distance_pos = new Vector3(0, 0, DistanceCounter);
             Instantiate(bioma1[IndiceRandomico],distance_pos, Quaternion.identity);
@@ -44,6 +44,7 @@ public class generatore_mondo : MonoBehaviour
         }
         else if(counter >= 10 && counter < 20)
         {
+            int IndiceRandomico = Random.Range(0, bioma2.Length);
             DistanceCounter = distance * counterPos;
             Instantiate(bioma2[IndiceRandomico], new Vector3(0, 0, DistanceCounter), Quaternion.identity);
             timer = 0;
@@ -52,6 +53,7 @@ public class generatore_mondo : MonoBehaviour
         }
         else if(counter >= 20 && counter < 30)
         {
+            int IndiceRandomico = Random.Range(0, bioma3.Length);
             DistanceCounter = distance * counterPos;
             Instantiate(bioma3[IndiceRandomico], new Vector3(0, 0, DistanceCounter), Quaternion.identity);
             timer = 0;

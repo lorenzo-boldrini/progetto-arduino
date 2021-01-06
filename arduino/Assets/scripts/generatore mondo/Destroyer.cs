@@ -12,7 +12,7 @@ public class Destroyer : MonoBehaviour
         {
             Destroy(other.gameObject);
             contatore_tiles++;
-            if(contatore_tiles == 20)
+            if(contatore_tiles >= 20)
             {
                 GeneratoreMondo.counter = 0;
                 contatore_tiles = 0;
