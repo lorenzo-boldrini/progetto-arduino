@@ -18,11 +18,11 @@ public class character_controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A) && PlayerXpose.x > -3.1f)
+        if (Input.GetKeyDown(KeyCode.A) && PlayerXpose.x > -2.8f)
         {
             PlayerXpose = new Vector3(transform.position.x - 1.8f, transform.position.y, transform.position.z);
         }
-        if (Input.GetKeyDown(KeyCode.D) && PlayerXpose.x < 3.1f)
+        if (Input.GetKeyDown(KeyCode.D) && PlayerXpose.x < 2.8f)
         {
             PlayerXpose = new Vector3(transform.position.x + 1.8f, transform.position.y, transform.position.z);
         }

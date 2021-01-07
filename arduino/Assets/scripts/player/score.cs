@@ -18,7 +18,7 @@ public class score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Score = (Mathf.Round(transform.position.x * 10)) ;
+        Score = (Mathf.Round(transform.position.z * 10));
         ScoreText.text = "Score: " + Score.ToString();
     }
 }
