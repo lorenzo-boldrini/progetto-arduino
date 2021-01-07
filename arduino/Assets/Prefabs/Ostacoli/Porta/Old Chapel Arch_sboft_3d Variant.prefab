@@ -7,6 +7,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3595027459013312210, guid: 13cbd7bf34923914cb42848b4a1e8db0, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595027459013312210, guid: 13cbd7bf34923914cb42848b4a1e8db0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094299163527446977, guid: 13cbd7bf34923914cb42848b4a1e8db0, type: 3}
+      propertyPath: m_TagString
+      value: Ostacolizzatore
+      objectReference: {fileID: 0}
+    - target: {fileID: 4234136347173276349, guid: 13cbd7bf34923914cb42848b4a1e8db0, type: 3}
+      propertyPath: m_TagString
+      value: Ostacolizzatore
+      objectReference: {fileID: 0}
     - target: {fileID: 4319473940614850536, guid: 13cbd7bf34923914cb42848b4a1e8db0, type: 3}
       propertyPath: m_Name
       value: Old Chapel Arch_sboft_3d Variant
@@ -14,6 +30,26 @@ PrefabInstance:
     - target: {fileID: 4319473940614850536, guid: 13cbd7bf34923914cb42848b4a1e8db0, type: 3}
       propertyPath: m_TagString
       value: Ostacolizzatore
+      objectReference: {fileID: 0}
+    - target: {fileID: 6469770192096679055, guid: 13cbd7bf34923914cb42848b4a1e8db0, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6469770192096679055, guid: 13cbd7bf34923914cb42848b4a1e8db0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6612381472751167303, guid: 13cbd7bf34923914cb42848b4a1e8db0, type: 3}
+      propertyPath: m_TagString
+      value: Ostacolizzatore
+      objectReference: {fileID: 0}
+    - target: {fileID: 7022939114460025955, guid: 13cbd7bf34923914cb42848b4a1e8db0, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7022939114460025955, guid: 13cbd7bf34923914cb42848b4a1e8db0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7058315951677322029, guid: 13cbd7bf34923914cb42848b4a1e8db0, type: 3}
       propertyPath: m_RootOrder

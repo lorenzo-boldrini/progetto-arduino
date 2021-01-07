@@ -8,7 +8,7 @@ public class Destroyer : MonoBehaviour
     int contatore_tiles;
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.tag == "Bioma")
+        if(other.gameObject.tag == "Bioma" || other.gameObject.tag == "Ostacolizzatore")
         {
             Destroy(other.gameObject);
             contatore_tiles++;
