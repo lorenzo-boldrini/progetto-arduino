@@ -15,6 +15,7 @@ public class Destroyer : MonoBehaviour
             if(contatore_tiles >= 20)
             {
                 GeneratoreMondo.counter = 0;
+                GeneratoreMondo.contatore -= 20;
                 contatore_tiles = 0;
             }
         }
