@@ -21,6 +21,8 @@ public class generatore_mondo : MonoBehaviour
     public bool obstacleActive;
 
     public int contatore;
+
+    public GameObject coin;
     // Start is called before the first frame update
     void Start()
     {
@@ -75,9 +77,21 @@ public class generatore_mondo : MonoBehaviour
     {
         if (obstacleActive)
         {
-            posizione_base = posizione_base + new Vector3(PosXobstacle[Random.Range(0, PosXobstacle.Length)], 0.3f, 0);
+            int random_obstaclePos = Random.Range(0, PosXobstacle.Length);
+            posizione_base = posizione_base + new Vector3(PosXobstacle[random_obstaclePos], 0.3f, 0);
+            int random_obstacle_obj = Random.Range(0, obstacle.Length);
+            Instantiate(obstacle[random_obstacle_obj], posizione_base, transform.rotation, PhaderGM.transform.parent);
+            int percentualeCoinSpoun = Random.Range(0, 100);
+            if(percentualeCoinSpoun >= 50)
+            {
+                if(random_obstacle_obj == 2)
+                Instantiate(coin, posizione_base + new Vector3(0, 0.5f, 0), transform.rotation);
+                else if(random_obstaclePos >= 1)
+                {
+                    Instantiate(coin, posizione_base + new Vector3(0, 0.5f, -1), transform.rotation);
 
-            Instantiate(obstacle[Random.Range(0, obstacle.Length)], posizione_base, transform.rotation, PhaderGM.transform.parent);
+                }
+            }
         }
     }
 

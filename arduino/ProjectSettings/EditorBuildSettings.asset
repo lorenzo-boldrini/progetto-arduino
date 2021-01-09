@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/test_vegetation.unity
+    guid: 4a2277e977d5cdb4bb688bf46fe29cfe
   m_configObjects: {}
