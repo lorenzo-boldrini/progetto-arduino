@@ -154,6 +154,73 @@ Transform:
   m_Father: {fileID: 1769310201}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &120282518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4573852350852087645, guid: 3828a9dc0729e964680ad9172a639d6a, type: 3}
+  m_PrefabInstance: {fileID: 5034969999198809591}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5034969999198809592}
+  - component: {fileID: 120282520}
+  - component: {fileID: 120282519}
+  m_Layer: 0
+  m_Name: Broken Chapel Stone Wall_LOD0__scbcc
+  m_TagString: Ostacolizzatore
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &120282519
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2628248452574748296, guid: 3828a9dc0729e964680ad9172a639d6a, type: 3}
+  m_PrefabInstance: {fileID: 5034969999198809591}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120282518}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: aa67a2503694e654baab4a0303916159, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &120282520
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 260537264799541826, guid: 3828a9dc0729e964680ad9172a639d6a, type: 3}
+  m_PrefabInstance: {fileID: 5034969999198809591}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120282518}
+  m_Mesh: {fileID: 8670288135988193296, guid: 2b8308aec319a434f82c204aa27ff191, type: 3}
 --- !u!1 &163425269
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,7 +391,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &379934541
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -831,7 +898,6 @@ Transform:
   m_Children:
   - {fileID: 5034969999198809592}
   - {fileID: 3014330030356564397}
-  - {fileID: 8461858175156812031}
   m_Father: {fileID: 1769310201}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -870,6 +936,73 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1352666035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2022644915549332091, guid: 9d164715306861e4eb19c8dcdf1de929, type: 3}
+  m_PrefabInstance: {fileID: 3014330030356564396}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3014330030356564397}
+  - component: {fileID: 1352666037}
+  - component: {fileID: 1352666036}
+  m_Layer: 0
+  m_Name: Broken Chapel Stone Wall_LOD4__scbcc
+  m_TagString: Ostacolizzatore
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &1352666036
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 509219730628723630, guid: 9d164715306861e4eb19c8dcdf1de929, type: 3}
+  m_PrefabInstance: {fileID: 3014330030356564396}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352666035}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: aa67a2503694e654baab4a0303916159, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1352666037
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2375063778672654180, guid: 9d164715306861e4eb19c8dcdf1de929, type: 3}
+  m_PrefabInstance: {fileID: 3014330030356564396}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352666035}
+  m_Mesh: {fileID: -1524855705257671301, guid: 3d4acda83268c854f9d805cc05ac55ed, type: 3}
 --- !u!1 &1530597372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1713,11 +1846,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d164715306861e4eb19c8dcdf1de929, type: 3}
---- !u!4 &3014330030356564397 stripped
+--- !u!4 &3014330030356564397
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 1682710707170261185, guid: 9d164715306861e4eb19c8dcdf1de929, type: 3}
   m_PrefabInstance: {fileID: 3014330030356564396}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352666035}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000029504295}
+  m_LocalPosition: {x: 15.79, y: 3.7743936, z: -1.37}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1003777936}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1001 &3774505723113026219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1897,11 +2039,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3828a9dc0729e964680ad9172a639d6a, type: 3}
---- !u!4 &5034969999198809592 stripped
+--- !u!4 &5034969999198809592
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 3761146524972606951, guid: 3828a9dc0729e964680ad9172a639d6a, type: 3}
   m_PrefabInstance: {fileID: 5034969999198809591}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120282518}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.0000029504295}
+  m_LocalPosition: {x: 17.24, y: 3.7743936, z: -0.0320282}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1003777936}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1001 &5066479128705820343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2099,6 +2250,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 369407865867616378, guid: 2db59fb9b3cf0804db33526aa30a8914, type: 3}
   m_PrefabInstance: {fileID: 5334124553176996755}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5957515545058775446
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1201697734384791333, guid: 5547ee0e1ae35a845948f49193d1df0e, type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201697734384791333, guid: 5547ee0e1ae35a845948f49193d1df0e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201697734384791333, guid: 5547ee0e1ae35a845948f49193d1df0e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201697734384791333, guid: 5547ee0e1ae35a845948f49193d1df0e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201697734384791333, guid: 5547ee0e1ae35a845948f49193d1df0e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201697734384791333, guid: 5547ee0e1ae35a845948f49193d1df0e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201697734384791333, guid: 5547ee0e1ae35a845948f49193d1df0e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201697734384791333, guid: 5547ee0e1ae35a845948f49193d1df0e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201697734384791333, guid: 5547ee0e1ae35a845948f49193d1df0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201697734384791333, guid: 5547ee0e1ae35a845948f49193d1df0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201697734384791333, guid: 5547ee0e1ae35a845948f49193d1df0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829792282836486497, guid: 5547ee0e1ae35a845948f49193d1df0e, type: 3}
+      propertyPath: m_Name
+      value: muro
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5547ee0e1ae35a845948f49193d1df0e, type: 3}
 --- !u!1001 &6621239675030804734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2416,68 +2624,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3163155915754568975, guid: 00730888ab74be34bae38a7b8465e37b, type: 3}
   m_PrefabInstance: {fileID: 8217459288751527475}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &8461858175156812030
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1003777936}
-    m_Modifications:
-    - target: {fileID: 3861911745662580563, guid: 08acb53f6ffe9d44283f3d0eeaa111bb, type: 3}
-      propertyPath: m_Name
-      value: Broken Chapel Stone Wall_LOD2__scbcc
-      objectReference: {fileID: 0}
-    - target: {fileID: 4527125782653316585, guid: 08acb53f6ffe9d44283f3d0eeaa111bb, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4527125782653316585, guid: 08acb53f6ffe9d44283f3d0eeaa111bb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 17.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 4527125782653316585, guid: 08acb53f6ffe9d44283f3d0eeaa111bb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.7743936
-      objectReference: {fileID: 0}
-    - target: {fileID: 4527125782653316585, guid: 08acb53f6ffe9d44283f3d0eeaa111bb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4.344597
-      objectReference: {fileID: 0}
-    - target: {fileID: 4527125782653316585, guid: 08acb53f6ffe9d44283f3d0eeaa111bb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4527125782653316585, guid: 08acb53f6ffe9d44283f3d0eeaa111bb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4527125782653316585, guid: 08acb53f6ffe9d44283f3d0eeaa111bb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4527125782653316585, guid: 08acb53f6ffe9d44283f3d0eeaa111bb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4527125782653316585, guid: 08acb53f6ffe9d44283f3d0eeaa111bb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4527125782653316585, guid: 08acb53f6ffe9d44283f3d0eeaa111bb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4527125782653316585, guid: 08acb53f6ffe9d44283f3d0eeaa111bb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 08acb53f6ffe9d44283f3d0eeaa111bb, type: 3}
---- !u!4 &8461858175156812031 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4527125782653316585, guid: 08acb53f6ffe9d44283f3d0eeaa111bb, type: 3}
-  m_PrefabInstance: {fileID: 8461858175156812030}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8639139726723080927
 PrefabInstance:

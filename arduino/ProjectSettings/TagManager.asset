@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bioma
   - Ostacolizzatore
+  - Coin
   layers:
   - Default
   - TransparentFX
