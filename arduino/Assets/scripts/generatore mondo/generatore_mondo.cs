@@ -32,6 +32,7 @@ public class generatore_mondo : MonoBehaviour
                 DistanceCounter = distance * counterPos;
                 Vector3 distance_pos = new Vector3(0, 0, DistanceCounter);
                 var obj = Instantiate(bioma1[IndiceRandomico], distance_pos, Quaternion.identity);
+                if(counter > 1)
                 generate_obstacle(distance_pos, obj);
                 counter++;
                 counterPos++;
