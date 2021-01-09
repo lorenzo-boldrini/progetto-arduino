@@ -17,7 +17,7 @@ public class generatore_mondo : MonoBehaviour
     float DistanceCounter;
 
     public GameObject[] obstacle;
-    public float PosXObstacle;
+    public float[] PosXobstacle;
     public bool obstacleActive;
 
     public int contatore;
@@ -74,7 +74,7 @@ public class generatore_mondo : MonoBehaviour
     {
         if (obstacleActive)
         {
-            posizione_base = posizione_base + new Vector3(Random.Range(-PosXObstacle, PosXObstacle), 0.3f, 0);
+            posizione_base = posizione_base + new Vector3(PosXobstacle[Random.Range(0, PosXobstacle.Length)], 0.3f, 0);
 
             Instantiate(obstacle[Random.Range(0, obstacle.Length)], posizione_base, transform.rotation, PhaderGM.transform.parent);
         }

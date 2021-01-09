@@ -8,7 +8,7 @@ public class character_controller : MonoBehaviour
 
     [Range(0,5)]
     [SerializeField] float speed;
-    Vector3 PlayerXpose;
+    float PlayerXpose;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,14 +18,14 @@ public class character_controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A) && PlayerXpose.x > -2.8f)
+        if (Input.GetKeyDown(KeyCode.A) && PlayerXpose > -2.8f)
         {
-            PlayerXpose = new Vector3(transform.position.x - 1.8f, transform.position.y, transform.position.z);
+            PlayerXpose -= 1.8f; 
         }
-        if (Input.GetKeyDown(KeyCode.D) && PlayerXpose.x < 2.8f)
+        if (Input.GetKeyDown(KeyCode.D) && PlayerXpose < 2.8f)
         {
-            PlayerXpose = new Vector3(transform.position.x + 1.8f, transform.position.y, transform.position.z);
+            PlayerXpose += 1.8f;
         }
-        transform.position = new Vector3(Mathf.Lerp(transform.position.x, PlayerXpose.x, speed * Time.deltaTime),transform.position.y,transform.position.z);
+        transform.position = new Vector3(Mathf.Lerp(transform.position.x, PlayerXpose, speed * Time.deltaTime),transform.position.y,transform.position.z);
     }
 }
