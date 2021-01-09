@@ -12,6 +12,6 @@ public class play_ui : MonoBehaviour
 
     public void Main_Menu()
     {
-
+        SceneManager.LoadScene("Menù");
     }
 }
