@@ -8,17 +8,22 @@ public class Destroyer : MonoBehaviour
     int contatore_tiles;
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.tag == "Bioma" || other.gameObject.tag == "Ostacolizz" +
-            "atore")
+        if(other.gameObject.tag == "Bioma")
         {
             Destroy(other.gameObject);
             contatore_tiles++;
-            if(contatore_tiles >= 20)
+            GeneratoreMondo.WorldGen();
+            if(contatore_tiles >= 30)
             {
                 GeneratoreMondo.counter = 0;
-                GeneratoreMondo.contatore -= 20;
+                GeneratoreMondo.contatore = 0;
                 contatore_tiles = 0;
             }
+        }
+
+        if(other.gameObject.tag == "Ostacolizzatore")
+        {
+            Destroy(other.gameObject);
         }
     }
 }

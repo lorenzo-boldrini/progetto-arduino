@@ -10,9 +10,7 @@ public class generatore_mondo : MonoBehaviour
 
     public score RefScore;
 
-    public float TimeToInstanitiate;
-    float timer;
-
+    
     public float distance;
     public int counter = 0;
     public int counterPos = 1;
@@ -26,59 +24,96 @@ public class generatore_mondo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        for(int i = 0; i <= 30; i++)
+        {
+            if (counter < 10)
+            {
+                int IndiceRandomico = Random.Range(0, bioma1.Length);
+                DistanceCounter = distance * counterPos;
+                Vector3 distance_pos = new Vector3(0, 0, DistanceCounter);
+                var obj = Instantiate(bioma1[IndiceRandomico], distance_pos, Quaternion.identity);
+                generate_obstacle(distance_pos, obj);
+                counter++;
+                counterPos++;
+                contatore++;
+            }
+            else if (counter >= 10 && counter < 20)
+            {
+                int IndiceRandomico = Random.Range(0, bioma2.Length);
+                DistanceCounter = distance * counterPos;
+                Vector3 distance_pos = new Vector3(0, 0, DistanceCounter);
+                var obj = Instantiate(bioma2[IndiceRandomico], new Vector3(0, 0, DistanceCounter), Quaternion.identity);
+                generate_obstacle(distance_pos, obj);
+                counter++;
+                counterPos++;
+                contatore++;
+            }
+            else if (counter >= 20 && counter < 30)
+            {
+                int IndiceRandomico = Random.Range(0, bioma3.Length);
+                DistanceCounter = distance * counterPos;
+                Vector3 distance_pos = new Vector3(0, 0, DistanceCounter);
+                var obj = Instantiate(bioma3[IndiceRandomico], new Vector3(0, 0, DistanceCounter), Quaternion.identity);
+                generate_obstacle(distance_pos, obj);
+                counter++;
+                counterPos++;
+                contatore++;
+            }
+        }
+        counter = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        timer += 1 * Time.deltaTime;
-        if(counter < 10)
-        {
-            int IndiceRandomico = Random.Range(0, bioma1.Length);
-            DistanceCounter = distance * counterPos;
-            Vector3 distance_pos = new Vector3(0, 0, DistanceCounter);
-            Instantiate(bioma1[IndiceRandomico],distance_pos, Quaternion.identity);
-            timer = 0;
-            generate_obstacle(distance_pos);
-            counter++;
-            counterPos++;
-            contatore++;
-        }
-        else if(counter >= 10 && counter < 20)
-        {
-            int IndiceRandomico = Random.Range(0, bioma2.Length);
-            DistanceCounter = distance * counterPos;
-            Vector3 distance_pos = new Vector3(0, 0, DistanceCounter);
-            Instantiate(bioma2[IndiceRandomico], new Vector3(0, 0, DistanceCounter), Quaternion.identity);
-            timer = 0;
-            generate_obstacle(distance_pos);
-            counter++;
-            counterPos++;
-            contatore++;
-        }
-        else if(counter >= 20 && counter < 30)
-        {
-            int IndiceRandomico = Random.Range(0, bioma3.Length);
-            DistanceCounter = distance * counterPos;
-            Vector3 distance_pos = new Vector3(0, 0, DistanceCounter);
-            Instantiate(bioma3[IndiceRandomico], new Vector3(0, 0, DistanceCounter), Quaternion.identity);
-            timer = 0;
-            generate_obstacle(distance_pos);
-            counter++;
-            counterPos++;
-            contatore++;
-        }
+      
     }
 
 
-    void generate_obstacle(Vector3 posizione_base)
+    void generate_obstacle(Vector3 posizione_base, GameObject PhaderGM)
     {
         if (obstacleActive)
         {
             posizione_base = posizione_base + new Vector3(Random.Range(-PosXObstacle, PosXObstacle), 0.3f, 0);
 
-            Instantiate(obstacle[Random.Range(0, obstacle.Length)], posizione_base, Quaternion.identity);
+            Instantiate(obstacle[Random.Range(0, obstacle.Length)], posizione_base, transform.rotation, PhaderGM.transform.parent);
+        }
+    }
+
+    public void WorldGen()
+    {
+        if (counter < 10)
+        {
+            int IndiceRandomico = Random.Range(0, bioma1.Length);
+            DistanceCounter = distance * counterPos;
+            Vector3 distance_pos = new Vector3(0, 0, DistanceCounter);
+            var obj = Instantiate(bioma1[IndiceRandomico], distance_pos, Quaternion.identity);
+            generate_obstacle(distance_pos, obj);
+            counter++;
+            counterPos++;
+            contatore++;
+        }
+        else if (counter >= 10 && counter < 20)
+        {
+            int IndiceRandomico = Random.Range(0, bioma2.Length);
+            DistanceCounter = distance * counterPos;
+            Vector3 distance_pos = new Vector3(0, 0, DistanceCounter);
+            var obj = Instantiate(bioma2[IndiceRandomico], new Vector3(0, 0, DistanceCounter), Quaternion.identity);
+            generate_obstacle(distance_pos, obj);
+            counter++;
+            counterPos++;
+            contatore++;
+        }
+        else if (counter >= 20 && counter < 30)
+        {
+            int IndiceRandomico = Random.Range(0, bioma3.Length);
+            DistanceCounter = distance * counterPos;
+            Vector3 distance_pos = new Vector3(0, 0, DistanceCounter);
+            var obj = Instantiate(bioma3[IndiceRandomico], new Vector3(0, 0, DistanceCounter), Quaternion.identity);
+            generate_obstacle(distance_pos, obj);
+            counter++;
+            counterPos++;
+            contatore++;
         }
     }
 }
