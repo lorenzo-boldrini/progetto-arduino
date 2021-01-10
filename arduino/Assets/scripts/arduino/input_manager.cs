@@ -10,8 +10,6 @@ public class input_manager : MonoBehaviour
     [Header("events")]
     public UnityEvent jumpKeyDownEvent;
     public UnityEvent jumpKeyUpEvent;
-    public UnityEvent Left;
-    public UnityEvent Right;
 
     [Header("stati")]
     public bool IsConnected;
@@ -31,6 +29,11 @@ public class input_manager : MonoBehaviour
             Destroy(this);
         else
             Singleton = this;
+        if(MyArduino == null)
+        {
+            MyArduino = GameObject.Find("Uniduino").GetComponent<Arduino>();
+            Time.timeScale = 0;
+        }
     }
     // Start is called before the first frame update
     void Start()
@@ -51,8 +54,16 @@ public class input_manager : MonoBehaviour
     {
         IsConnected = MyArduino.Connected;
         jumpManager();
+        startGame();
     }
 
+    void startGame()
+    {
+        if (MyArduino != null)
+        {
+            Time.timeScale = 1;
+        }
+    }
     void jumpManager()
     {
         if (MyArduino.digitalRead(jumpButtonPin) > 0.5f)
