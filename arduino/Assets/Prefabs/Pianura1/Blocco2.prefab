@@ -1351,7 +1351,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9124775372948270961}
   - component: {fileID: 8967795147565255089}
-  - component: {fileID: 9173062395677432387}
   - component: {fileID: 8697151550796047610}
   m_Layer: 0
   m_Name: TVE_Pine_006_01_Prefab
@@ -1399,20 +1398,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 9149820172940167763}
   m_Enabled: 1
---- !u!136 &9173062395677432387
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9127130215026624701}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.16
-  m_Height: 6.98
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.95, z: 0}
 --- !u!114 &8697151550796047610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2169,6 +2154,7 @@ GameObject:
   - component: {fileID: 9124671067985504497}
   - component: {fileID: 9140587176984305829}
   - component: {fileID: 9149837285231968367}
+  - component: {fileID: 2269624343151889863}
   m_Layer: 0
   m_Name: Rock_Granite_reFto_LOD0
   m_TagString: Untagged
@@ -2239,6 +2225,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2269624343151889863
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9127254601123715035}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: 9217d1eed23841208d68394627facfed, type: 3}
 --- !u!1 &9127254602647478162
 GameObject:
   m_ObjectHideFlags: 0
@@ -2250,6 +2250,7 @@ GameObject:
   - component: {fileID: 9124671066790305976}
   - component: {fileID: 9140587176629545196}
   - component: {fileID: 9149837283526772774}
+  - component: {fileID: 4218359428684973119}
   m_Layer: 0
   m_Name: Rock_Granite_reFto_LOD0
   m_TagString: Untagged
@@ -2320,6 +2321,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4218359428684973119
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9127254602647478162}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: 9217d1eed23841208d68394627facfed, type: 3}
 --- !u!1 &9127311799303121474
 GameObject:
   m_ObjectHideFlags: 0
@@ -3269,7 +3284,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9132849749168656625}
   - component: {fileID: 8968660363094996017}
-  - component: {fileID: 9172241358830163305}
   - component: {fileID: 4714100343229119524}
   m_Layer: 0
   m_Name: TVE_pine_006_02_Prefab (1)
@@ -3317,20 +3331,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 9151155683033933101}
   m_Enabled: 1
---- !u!136 &9172241358830163305
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9127476476187583061}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.11
-  m_Height: 6.98
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.95, z: 0}
 --- !u!114 &4714100343229119524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3601,7 +3601,6 @@ GameObject:
   - component: {fileID: 9124785652534088862}
   - component: {fileID: 9140947935644976258}
   - component: {fileID: 9150746893327639126}
-  - component: {fileID: 3478652039204203587}
   m_Layer: 8
   m_Name: Fern_Var3_LOD0
   m_TagString: Untagged
@@ -3672,20 +3671,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3478652039204203587
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9127614306992244172}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &9127614307940201615
 GameObject:
   m_ObjectHideFlags: 0

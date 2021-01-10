@@ -489,7 +489,6 @@ GameObject:
   - component: {fileID: 946145129186255055}
   - component: {fileID: 962515196386570451}
   - component: {fileID: 972032183029028359}
-  - component: {fileID: 4883597814783318034}
   m_Layer: 8
   m_Name: Fern_Var3_LOD0
   m_TagString: Untagged
@@ -560,20 +559,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4883597814783318034
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 948972087126995357}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &949037982457985261
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,7 +961,6 @@ GameObject:
   - component: {fileID: 1274626779937953457}
   - component: {fileID: 1274626779936626321}
   - component: {fileID: 1274626779935659089}
-  - component: {fileID: 1999791412923414066}
   m_Layer: 0
   m_Name: L_LOD0
   m_TagString: Untagged
@@ -1049,20 +1033,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &1999791412923414066
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1274626779937589905}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.58
-  m_Height: 20.784184
-  m_Direction: 1
-  m_Center: {x: -0.1, y: 10.3, z: -0.01}
 --- !u!1 &1274626779937589907
 GameObject:
   m_ObjectHideFlags: 0
@@ -2702,7 +2672,6 @@ GameObject:
   - component: {fileID: 3642113581300186834}
   - component: {fileID: 3670865266391150286}
   - component: {fileID: 3663494561883768858}
-  - component: {fileID: 8965546097620649487}
   m_Layer: 8
   m_Name: Fern_Var3_LOD0
   m_TagString: Untagged
@@ -2773,20 +2742,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8965546097620649487
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3639313049752317824}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &3639379082390267632
 GameObject:
   m_ObjectHideFlags: 0
@@ -4973,6 +4928,7 @@ GameObject:
   - component: {fileID: 8101653238997098198}
   - component: {fileID: 5170415114446147955}
   - component: {fileID: 6928214557975340473}
+  - component: {fileID: 5078450006843900166}
   m_Layer: 0
   m_Name: Canyon Sandstone Rocky Ground_LOD2__ulbdbaf (2)
   m_TagString: Untagged
@@ -5043,6 +4999,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5078450006843900166
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8873509768281506924}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 875756455552943990, guid: f291c0d0910b2574c8fb294178980e2f, type: 3}
 --- !u!1 &8945324711699512639
 GameObject:
   m_ObjectHideFlags: 0
@@ -5534,7 +5504,6 @@ GameObject:
   - component: {fileID: 9223094557020606633}
   - component: {fileID: 9189005847070032053}
   - component: {fileID: 9197256743923541601}
-  - component: {fileID: 3537687526277458036}
   m_Layer: 8
   m_Name: Fern_Var3_LOD0
   m_TagString: Untagged
@@ -5605,20 +5574,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3537687526277458036
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9220292633365479931}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &9220499412752746635
 GameObject:
   m_ObjectHideFlags: 0

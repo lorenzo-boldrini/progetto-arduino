@@ -49,6 +49,20 @@ MonoBehaviour:
   storedPrefabBackup: {fileID: 3916415413296967440, guid: 364e6a845d900dd4fbc0d9cdeb2e0efd, type: 3}
   storedMaxBoundsInfo: {x: 2.906475, y: 0.09738604, z: 2.906475, w: 0}
   storedPreset: Vegetation Assets/The Vegetation Engine/Demo Clover
+--- !u!64 &1147131586252465742
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6278642088414700606}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3314064830505380972, guid: 43db6747eeae01d4aa642390a1a6591e, type: 3}
 --- !u!1 &6621239673642937469
 GameObject:
   m_ObjectHideFlags: 0
@@ -5719,7 +5733,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7712926262601663986, guid: ca4f5bb55fb2f1e4f8f6c2f50472d734, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ca4f5bb55fb2f1e4f8f6c2f50472d734, type: 3}
 --- !u!4 &4672023988251242148 stripped
 Transform:
@@ -6171,7 +6186,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9117364948805078636, guid: 39246af5c742bdd4d91371f3b7ea2a7c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 39246af5c742bdd4d91371f3b7ea2a7c, type: 3}
 --- !u!4 &7052223822266140621 stripped
 Transform:
@@ -7097,6 +7113,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43db6747eeae01d4aa642390a1a6591e, type: 3}
+--- !u!1 &6278642088414700606 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 43db6747eeae01d4aa642390a1a6591e, type: 3}
+  m_PrefabInstance: {fileID: 6621239675045239151}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6659107623661878916 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 43db6747eeae01d4aa642390a1a6591e, type: 3}
@@ -8233,7 +8254,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7712926262601663986, guid: ca4f5bb55fb2f1e4f8f6c2f50472d734, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ca4f5bb55fb2f1e4f8f6c2f50472d734, type: 3}
 --- !u!4 &4672023987922267291 stripped
 Transform:
