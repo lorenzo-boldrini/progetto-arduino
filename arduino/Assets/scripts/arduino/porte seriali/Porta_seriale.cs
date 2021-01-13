@@ -51,6 +51,7 @@ public class Porta_seriale : MonoBehaviour
 
     private void OnDisable()
     {
+        PortaSerialeArduino.WriteLine("pulisci");
         if (PortaSerialeArduino != null && PortaSerialeArduino.IsOpen)
             PortaSerialeArduino.Close();
         if (PortaSerialeArduino != null && TredArduino.IsAlive)
