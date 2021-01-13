@@ -12,7 +12,7 @@ public class Porta_seriale : MonoBehaviour
 
     public float potenziometroValue;
     public bool ButtonValue;
-
+    public score Score_Ref;
 
     string potenziometroValueString = "";
     // Start is called before the first frame update
@@ -46,10 +46,7 @@ public class Porta_seriale : MonoBehaviour
             potenziometroValue = (float.Parse(SerialDataArduino[1])/1024);
             ButtonValue = int.Parse(SerialDataArduino[2]) == 1 ? true : false;
         }
-        if (Input.GetKey(KeyCode.Space))
-            PortaSerialeArduino.WriteLine("hello" + 1.ToString());
-        else
-            PortaSerialeArduino.WriteLine("hello" + 0.ToString());
+            PortaSerialeArduino.WriteLine("sc" + Score_Ref.Score.ToString());
     }
 
     private void OnDisable()

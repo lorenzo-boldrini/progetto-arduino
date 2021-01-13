@@ -5,7 +5,7 @@ using TMPro;
 
 public class score : MonoBehaviour
 {
-    public float Score;
+    public int Score;
     [Range(0,10)]
     public float multiplayerScore;
     public TMP_Text ScoreText;
@@ -21,7 +21,8 @@ public class score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Score = (Mathf.Round(transform.position.z));
+        Score = (int)(Mathf.Round(transform.position.z));
+        print(Score);
         ScoreText.text = "Score: " + Score.ToString();
     }
 

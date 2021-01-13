@@ -4,46 +4,44 @@
 */
 
 
-// Tutti i Serial.print segnati come debug, non sono dati necessari per la comunicazione con unity, quindi andrebbero rimossi nel vostro codice finale.
+#include <Arduino.h>
+#include <U8x8lib.h>
+ 
+ U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
+ 
+// U8X8_SSD1306_128X64_NONAME_SW_I2C u8x8(/* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);   // OLEDs without Reset of the Display
 
 String inputString = "";         // a String to hold incoming data
 bool stringComplete = false;  // whether the string is complete
 
+String ScreenString = "";
 void setup() {
   // initialize serial:
   Serial.begin(9600);
   // reserve 200 bytes for the inputString:
-  inputString.reserve(200);
-  pinMode(4, OUTPUT);
+  
+  u8x8.begin();
+  u8x8.setFlipMode(1);
 }
 
 void loop() {
   // stringComplete diventa vero ogni volta che una nuova stringa arriva ad arduino via seriale
-  if (stringComplete) {   
-      // DEBUG Stampa la stringa.
-      Serial.println(inputString);
-      // DEBUG Stampa il numero di caratteri da cui è composta la stringa.
-      Serial.println(inputString.length());
-      
-      // Leggo solo le prime 5 lettere della stringa di ingresso, primo parametro char di partenza, incluso, secondo parametro, numero di char da leggere, quindi se contate che il conteggio parte sempre da 0
-      // il numero che scriverete sarà escluso, quindi se volete fino al char 4 scrivete 5, fino a 5 scrivete 6 ecc...
-      if(inputString.substring(0,5) == "hello"){
-        // DEBUG La stringa può essere interpretata da questo sketch perche le prime 5 lettere sono hello.
-        Serial.println("String OK");
-
-        // Se il char 6 (quindi 5 partendo dallo 0) è 1 quindi accendi il led, se è 0 spegnilo.
-        if (inputString.substring(5).toInt() == 1){
-        digitalWrite(4, HIGH);   // turn the LED on (HIGH is the voltage level)
-        }
-
-        if (inputString.substring(5).toInt() == 0){
-        digitalWrite(4, LOW);    // turn the LED off by making the voltage LOW
-        }
+   if (stringComplete) {   
+      // Controlla se la stringa in ingresso contiene la parola d'ordine sc
+      if(inputString.substring(0,2) == "sc"){
+        ScreenString = inputString.substring(2, "/n");
+        // DEBUG
+        Serial.println(ScreenString);
       }
       else {
-        // DEBUG La stringa non inizia con hello, non può essere interpretata da questo sketch.
+        //DEBUG
         Serial.println("String Wrong");
       }      
+
+    // Aggiorna lo schermo
+    u8x8.setFont(u8x8_font_amstrad_cpc_extended_r);
+    u8x8.setCursor(0, 0);
+    u8x8.print(ScreenString);
       
     // clear the string:
     inputString = "";
