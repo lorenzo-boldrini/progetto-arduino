@@ -34,15 +34,15 @@ public class character_controller : MonoBehaviour
         PosController();
     }
 
-    public void startToRunAnim()
+    /*public void startToRunAnim()
     {
         _animCon.SetBool("StartGame", true);
-    }
+    }*/
 
     int numCorsia;
     void PosController()
     {
-        float value = input_manager.Singleton.SliderValue;
+        float value = Porta_seriale.InputControllerPS.potenziometroValue;
            if(value > 0.8f)
                 numCorsia = 4;
            else if (value > 0.6f && value < 0.8f)

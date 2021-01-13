@@ -21,6 +21,7 @@ public class input_manager : MonoBehaviour
     public Arduino MyArduino;
     public int jumpButtonPin = 6;
     public int sliderPin = 0;
+    public int lightPin = 6;
 
     bool jumpones;
     float DeathZone;
@@ -45,6 +46,9 @@ public class input_manager : MonoBehaviour
 
         MyArduino.pinMode(sliderPin, PinMode.ANALOG);
         MyArduino.reportAnalog(sliderPin, 1);
+
+        MyArduino.pinMode(lightPin, PinMode.ANALOG);
+        MyArduino.reportAnalog(lightPin, 1);
     }
     // Update is called once per frame
     void Update()
@@ -52,6 +56,7 @@ public class input_manager : MonoBehaviour
         IsConnected = MyArduino.Connected;
         StartToRun();
         slidercon();
+        light_controller();
     }
     void jumpManager()
     {
@@ -88,5 +93,10 @@ public class input_manager : MonoBehaviour
     {
         SliderValue = (float)MyArduino.analogRead(sliderPin) / 1048;
 
+    }
+
+    void light_controller()
+    {
+        print(MyArduino.analogRead(lightPin));
     }
 }

@@ -1,0 +1,86 @@
+/*
+  Sketch di esempio per comunicare dati a Arduino usando il seriale.
+  Samuele Cigardi per NABA 2020
+*/
+
+
+#include <Arduino.h>
+#include <U8x8lib.h>
+ 
+ U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE);
+ 
+// U8X8_SSD1306_128X64_NONAME_SW_I2C u8x8(/* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);   // OLEDs without Reset of the Display
+
+String inputString = "";         // a String to hold incoming data
+bool stringComplete = false;  // whether the string is complete
+
+String ScreenString = "";
+void setup() {
+  // initialize serial:
+  Serial.begin(9600);
+  // reserve 200 bytes for the inputString:
+  
+  u8x8.begin();
+  u8x8.setFlipMode(1);
+}
+
+void loop() {
+  // stringComplete diventa vero ogni volta che una nuova stringa arriva ad arduino via seriale
+   if (stringComplete) {   
+      // Controlla se la stringa in ingresso contiene la parola d'ordine sc
+      if(inputString.substring(0,2) == "sc"){
+        ScreenString = inputString.substring(2, "/n");
+        // DEBUG
+        Serial.println(ScreenString);
+      }
+      else {
+        //DEBUG
+        Serial.println("String Wrong");
+      }      
+
+    // Aggiorna lo schermo
+    u8x8.setFont(u8x8_font_amstrad_cpc_extended_r);
+    u8x8.setCursor(0, 0);
+    u8x8.print(ScreenString);
+      
+    // clear the string:
+    inputString = "";
+    stringComplete = false;
+  }
+//-----------------------input-----------------------------------------------------------------------------
+
+
+   int potValue = analogRead(A0);
+  int buttonValue = digitalRead(6);
+  String sensorValue = "";
+  sensorValue += "Data";
+  sensorValue += "/";
+  sensorValue += String(potValue);
+
+  sensorValue += "/";
+  sensorValue += String(buttonValue);
+
+  Serial.println(sensorValue);
+}
+
+/*
+  SerialEvent occurs whenever a new data comes in the hardware serial RX. This
+  routine is run between each time loop() runs, so using delay inside loop can
+  delay response. Multiple bytes of data may be available.
+  This version of serial event has been customized by Samuele Cigardi to remove NL and CR chars,
+  so the result is easier to be processed by the students.
+*/
+void serialEvent() {
+  while (Serial.available()) {
+    // get the new byte:
+    char inChar = (char)Serial.read();
+    
+    if (inChar == '\n') {     
+      stringComplete = true;
+    }
+    else if (inChar != '\r'){   
+      // add it to the inputString:
+      inputString += inChar;     
+    }
+  }
+}
