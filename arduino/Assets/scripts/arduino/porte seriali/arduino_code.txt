@@ -14,6 +14,8 @@
 String inputString = "";         // a String to hold incoming data
 bool stringComplete = false;  // whether the string is complete
 
+bool ScreenActive = true;
+
 String ScreenString = "";
 void setup() {
   // initialize serial:
@@ -22,6 +24,8 @@ void setup() {
   
   u8x8.begin();
   u8x8.setFlipMode(1);
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, HIGH);
 }
 
 void loop() {
@@ -29,19 +33,28 @@ void loop() {
    if (stringComplete) {   
       // Controlla se la stringa in ingresso contiene la parola d'ordine sc
       if(inputString.substring(0,2) == "sc"){
-        ScreenString = inputString.substring(2, "/n");
+        ScreenActive = true;
+        ScreenString = inputString.substring(2);
         // DEBUG
         Serial.println(ScreenString);
       }
       else {
         //DEBUG
         Serial.println("String Wrong");
-      }      
+      }   
+         if(inputString == "pulisci"){
+           ScreenActive = false;
+         }
 
     // Aggiorna lo schermo
+    if(ScreenActive == true){
     u8x8.setFont(u8x8_font_amstrad_cpc_extended_r);
     u8x8.setCursor(0, 0);
-    u8x8.print(ScreenString);
+    u8x8.print("score: " + ScreenString);
+    }
+    else{
+    u8x8.clear();
+    }
       
     // clear the string:
     inputString = "";
