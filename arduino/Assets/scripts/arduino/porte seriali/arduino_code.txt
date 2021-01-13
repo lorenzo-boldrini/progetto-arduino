@@ -1,0 +1,88 @@
+/*
+  Sketch di esempio per comunicare dati a Arduino usando il seriale.
+  Samuele Cigardi per NABA 2020
+*/
+
+
+// Tutti i Serial.print segnati come debug, non sono dati necessari per la comunicazione con unity, quindi andrebbero rimossi nel vostro codice finale.
+
+String inputString = "";         // a String to hold incoming data
+bool stringComplete = false;  // whether the string is complete
+
+void setup() {
+  // initialize serial:
+  Serial.begin(9600);
+  // reserve 200 bytes for the inputString:
+  inputString.reserve(200);
+  pinMode(4, OUTPUT);
+}
+
+void loop() {
+  // stringComplete diventa vero ogni volta che una nuova stringa arriva ad arduino via seriale
+  if (stringComplete) {   
+      // DEBUG Stampa la stringa.
+      Serial.println(inputString);
+      // DEBUG Stampa il numero di caratteri da cui è composta la stringa.
+      Serial.println(inputString.length());
+      
+      // Leggo solo le prime 5 lettere della stringa di ingresso, primo parametro char di partenza, incluso, secondo parametro, numero di char da leggere, quindi se contate che il conteggio parte sempre da 0
+      // il numero che scriverete sarà escluso, quindi se volete fino al char 4 scrivete 5, fino a 5 scrivete 6 ecc...
+      if(inputString.substring(0,5) == "hello"){
+        // DEBUG La stringa può essere interpretata da questo sketch perche le prime 5 lettere sono hello.
+        Serial.println("String OK");
+
+        // Se il char 6 (quindi 5 partendo dallo 0) è 1 quindi accendi il led, se è 0 spegnilo.
+        if (inputString.substring(5).toInt() == 1){
+        digitalWrite(4, HIGH);   // turn the LED on (HIGH is the voltage level)
+        }
+
+        if (inputString.substring(5).toInt() == 0){
+        digitalWrite(4, LOW);    // turn the LED off by making the voltage LOW
+        }
+      }
+      else {
+        // DEBUG La stringa non inizia con hello, non può essere interpretata da questo sketch.
+        Serial.println("String Wrong");
+      }      
+      
+    // clear the string:
+    inputString = "";
+    stringComplete = false;
+  }
+//-----------------------input-----------------------------------------------------------------------------
+
+
+   int potValue = analogRead(A0);
+  int buttonValue = digitalRead(6);
+  String sensorValue = "";
+  sensorValue += "Data";
+  sensorValue += "/";
+  sensorValue += String(potValue);
+
+  sensorValue += "/";
+  sensorValue += String(buttonValue);
+
+  Serial.println(sensorValue);
+}
+
+/*
+  SerialEvent occurs whenever a new data comes in the hardware serial RX. This
+  routine is run between each time loop() runs, so using delay inside loop can
+  delay response. Multiple bytes of data may be available.
+  This version of serial event has been customized by Samuele Cigardi to remove NL and CR chars,
+  so the result is easier to be processed by the students.
+*/
+void serialEvent() {
+  while (Serial.available()) {
+    // get the new byte:
+    char inChar = (char)Serial.read();
+    
+    if (inChar == '\n') {     
+      stringComplete = true;
+    }
+    else if (inChar != '\r'){   
+      // add it to the inputString:
+      inputString += inChar;     
+    }
+  }
+}

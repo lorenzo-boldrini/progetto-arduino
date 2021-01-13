@@ -6,14 +6,18 @@ public class Color_settings : MonoBehaviour
 {
     public GameObject Character;
     public Material[] CharacterColor;
+    
     public int ColorSet;
+
 
     [SerializeField] GameObject RightButton;
     [SerializeField] GameObject LeftButton;
+    [SerializeField] GameObject SelectButton;
+    [SerializeField] GameObject BuyButton;
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(CharacterColor.Length);
+        
     }
 
    public void ColorSettingsLeft()
@@ -25,6 +29,7 @@ public class Color_settings : MonoBehaviour
         RightButton.SetActive(true);
 
         SetColor();
+
 
     }
 
