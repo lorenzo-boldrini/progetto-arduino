@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO.Ports;
 using System.Threading;
+using UnityEngine.Events;
 
 public class Porta_seriale : MonoBehaviour
 {
@@ -15,6 +16,12 @@ public class Porta_seriale : MonoBehaviour
     public score Score_Ref;
 
     string potenziometroValueString = "";
+
+    public UnityEvent buttonPressed;
+    public UnityEvent buttonDown;
+    public UnityEvent buttonUp;
+
+    public bool buttonDownA;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,21 +47,40 @@ public class Porta_seriale : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (potenziometroValueString.Contains("Data"))
         {
             string[] SerialDataArduino = potenziometroValueString.Split('/');
             potenziometroValue = (float.Parse(SerialDataArduino[1])/1024);
             ButtonValue = int.Parse(SerialDataArduino[2]) == 1 ? true : false;
         }
-            PortaSerialeArduino.WriteLine("sc" + Score_Ref.Score.ToString());
+        buttonFunction();
     }
 
     private void OnDisable()
     {
-        PortaSerialeArduino.WriteLine("pulisci");
+        PortaSerialeArduino.WriteLine("death");
         if (PortaSerialeArduino != null && PortaSerialeArduino.IsOpen)
             PortaSerialeArduino.Close();
         if (PortaSerialeArduino != null && TredArduino.IsAlive)
             TredArduino.Abort();
+    }
+
+    void buttonFunction()
+    {
+        if (ButtonValue)
+        {
+            buttonPressed.Invoke();
+            if (!buttonDownA)
+            {
+                buttonDown.Invoke();
+                buttonDownA = true;
+            }
+        }
+        else
+        {
+            buttonDownA = false;
+            buttonUp.Invoke();
+        }
     }
 }

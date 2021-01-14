@@ -9,10 +9,16 @@ public class character_controller : MonoBehaviour
     [Range(0,5)]
     [SerializeField] float speed;
     float PlayerXpose;
+    Rigidbody _RG;
+
+    [Range(0, 10)]
+    [SerializeField] float JumpForce;
+    bool canJump;
     // Start is called before the first frame update
     void Start()
     {
         _animCon = GetComponent<Animator>();
+        _RG = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -56,11 +62,16 @@ public class character_controller : MonoBehaviour
            else
                 numCorsia = 0;
 
-        Debug.Log(numCorsia);
+
     }
 
     public void jump()
     {
         Debug.Log("salta puttanella");
+        if (canJump)
+        {
+            _RG.AddForce(new Vector3(0, JumpForce, 0), ForceMode.Impulse);
+            canJump = false;
+        }
     }
 }
