@@ -13,7 +13,7 @@ public class character_controller : MonoBehaviour
 
     [Range(0, 10)]
     [SerializeField] float JumpForce;
-    bool canJump;
+    public bool canJump;
     // Start is called before the first frame update
     void Start()
     {
@@ -67,11 +67,22 @@ public class character_controller : MonoBehaviour
 
     public void jump()
     {
-        Debug.Log("salta puttanella");
+        
         if (canJump)
         {
+            Debug.Log("salta puttanella");
             _RG.AddForce(new Vector3(0, JumpForce, 0), ForceMode.Impulse);
-            canJump = false;
+            
         }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Bioma")
+            canJump = false;
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Bioma")
+            canJump = true;
     }
 }
