@@ -14,6 +14,7 @@ public class character_controller : MonoBehaviour
     [Range(0, 10)]
     public float JumpForce;
     public bool canJump;
+    public float value;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,7 +49,6 @@ public class character_controller : MonoBehaviour
     int numCorsia;
     void PosController()
     {
-        float value = Porta_seriale.InputControllerPS.potenziometroValue;
            if(value > 0.8f)
                 numCorsia = 4;
            else if (value > 0.6f && value < 0.8f)

@@ -4,6 +4,7 @@ using UnityEngine;
 using System.IO.Ports;
 using System.Threading;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Porta_seriale : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class Porta_seriale : MonoBehaviour
     public float potenziometroValue;
     public bool ButtonValue;
     public score Score_Ref;
+    public coin_player_counter coin_ref;
+    public character_controller playerController;
+    GameObject Refplayer;
 
     string potenziometroValueString = "";
 
@@ -25,6 +29,14 @@ public class Porta_seriale : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (SceneManager.GetActiveScene().name == "test_vegetation")
+        {
+            Refplayer = GameObject.Find("Fairy@Running 1");
+            Score_Ref = Refplayer.GetComponent<score>();
+            coin_ref = Refplayer.GetComponent<coin_player_counter>();
+            playerController = Refplayer.GetComponent<character_controller>();
+        }
+        DontDestroyOnLoad(this.gameObject);
         inizializeArduino();
         TredArduino = new Thread(ArduinoSerialRead);
         TredArduino.Start();
@@ -47,20 +59,26 @@ public class Porta_seriale : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        TakePlayerData();
         if (potenziometroValueString.Contains("Data"))
         {
             string[] SerialDataArduino = potenziometroValueString.Split('/');
             potenziometroValue = (float.Parse(SerialDataArduino[1])/1024);
             ButtonValue = int.Parse(SerialDataArduino[2]) == 1 ? true : false;
         }
-        PortaSerialeArduino.WriteLine("dt" + Score_Ref.Score.ToString() + "/" );
-        buttonFunction();
+        if (SceneManager.GetActiveScene().name == "test_vegetation")
+        {
+            playerController.value = potenziometroValue;
+            buttonFunction();
+            if(Refplayer.activeSelf)
+            PortaSerialeArduino.WriteLine("dt" + Score_Ref.Score.ToString() + "/" + coin_ref.coinForScreen.ToString() + "/");
+            else
+            PortaSerialeArduino.WriteLine("d");
+        }
     }
 
     private void OnDisable()
     {
-        PortaSerialeArduino.WriteLine("d");
         if (PortaSerialeArduino != null && PortaSerialeArduino.IsOpen)
             PortaSerialeArduino.Close();
         if (PortaSerialeArduino != null && TredArduino.IsAlive)
@@ -76,12 +94,24 @@ public class Porta_seriale : MonoBehaviour
             {
                 buttonDown.Invoke();
                 buttonDownA = true;
+                playerController.jump();
             }
         }
         else
         {
             buttonDownA = false;
             buttonUp.Invoke();
+        }
+    }
+
+    void TakePlayerData()
+    {
+        if (SceneManager.GetActiveScene().name == "test_vegetation" && Refplayer == null || Score_Ref == null || coin_ref == null || playerController == null)
+        {
+            Refplayer = GameObject.Find("Fairy@Running 1");
+            Score_Ref = Refplayer.GetComponent<score>();
+            coin_ref = Refplayer.GetComponent<coin_player_counter>();
+            playerController = Refplayer.GetComponent<character_controller>();
         }
     }
 }
