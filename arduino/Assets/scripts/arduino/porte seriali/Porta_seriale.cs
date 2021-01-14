@@ -54,12 +54,13 @@ public class Porta_seriale : MonoBehaviour
             potenziometroValue = (float.Parse(SerialDataArduino[1])/1024);
             ButtonValue = int.Parse(SerialDataArduino[2]) == 1 ? true : false;
         }
+        PortaSerialeArduino.WriteLine("dt" + Score_Ref.Score.ToString() + "/" );
         buttonFunction();
     }
 
     private void OnDisable()
     {
-        PortaSerialeArduino.WriteLine("death");
+        PortaSerialeArduino.WriteLine("d");
         if (PortaSerialeArduino != null && PortaSerialeArduino.IsOpen)
             PortaSerialeArduino.Close();
         if (PortaSerialeArduino != null && TredArduino.IsAlive)

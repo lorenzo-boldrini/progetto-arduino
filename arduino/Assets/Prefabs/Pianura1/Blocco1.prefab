@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 2962746784461166561}
   m_Layer: 0
   m_Name: Natura 1
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 2717944629769770198}
   m_Layer: 8
   m_Name: Meadow_Grass_01_Var6_LOD0
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 9011441939970092009}
   m_Layer: 8
   m_Name: TVE_Meadow_Grass_01_Var6_Prefab (5)
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -618,7 +618,7 @@ GameObject:
   - component: {fileID: 5790715562084292947}
   m_Layer: 0
   m_Name: TVE_RedBush_Var1_Prefab (4)
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -696,7 +696,7 @@ GameObject:
   - component: {fileID: 579209928333126236}
   m_Layer: 0
   m_Name: Rock_Granite_reFto_LOD2
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -1018,7 +1018,7 @@ GameObject:
   - component: {fileID: 4338939063352769824}
   m_Layer: 0
   m_Name: Rocce 1
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1052,7 +1052,7 @@ GameObject:
   - component: {fileID: 2135808619031999274}
   m_Layer: 8
   m_Name: Meadow_Grass_01_Var6_LOD1
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1215,7 +1215,7 @@ GameObject:
   - component: {fileID: 339752253374141870}
   m_Layer: 0
   m_Name: Rock_Granite_reFto_LOD0
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 81
@@ -1310,7 +1310,7 @@ GameObject:
   - component: {fileID: 7265019198548229814}
   m_Layer: 0
   m_Name: TVE_Clover_01_Var4_Prefab (3)
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -1677,7 +1677,7 @@ GameObject:
   - component: {fileID: 6991952997926174221}
   m_Layer: 8
   m_Name: TVE_Fern_var03_Prefab (2)
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -1755,7 +1755,7 @@ GameObject:
   - component: {fileID: 69976550817721321}
   m_Layer: 0
   m_Name: TVE_Rock_Granite_reFto (5)
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 81
@@ -1914,7 +1914,7 @@ GameObject:
   - component: {fileID: 6386086450748563396}
   m_Layer: 0
   m_Name: TVE_Clover_01_Var4_Prefab (2)
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -1992,7 +1992,7 @@ GameObject:
   - component: {fileID: 3482409250240850503}
   m_Layer: 0
   m_Name: TVE_Rock_Granite_reFto (6)
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 81
@@ -2070,7 +2070,7 @@ GameObject:
   - component: {fileID: 632691515833045921}
   m_Layer: 0
   m_Name: Rock_Granite_reFto_LOD1
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -2232,7 +2232,7 @@ GameObject:
   - component: {fileID: 8779456345995010103}
   m_Layer: 0
   m_Name: TVE_Clover_01_Var4_Prefab (4)
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -2310,7 +2310,7 @@ GameObject:
   - component: {fileID: 8652404651600873179}
   m_Layer: 0
   m_Name: TVE_RedBush_Var1_Prefab (1)
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -2388,7 +2388,7 @@ GameObject:
   - component: {fileID: 8836331445607971006}
   m_Layer: 0
   m_Name: TVE_RedBush_Var1_Prefab (3)
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -2628,7 +2628,7 @@ GameObject:
   - component: {fileID: 5341086064350592908}
   m_Layer: 0
   m_Name: Rock_Granite_reFto_LOD1
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -3276,7 +3276,7 @@ GameObject:
   - component: {fileID: 5999288647846331730}
   m_Layer: 0
   m_Name: Rock_Granite_reFto_LOD2
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -3681,7 +3681,7 @@ GameObject:
   - component: {fileID: 1683189407136954771}
   m_Layer: 8
   m_Name: TVE_Meadow_Grass_01_Var6_Prefab (3)
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3756,7 +3756,7 @@ GameObject:
   - component: {fileID: 6216441246743765493}
   m_Layer: 8
   m_Name: TVE_Fern_var03_Prefab (1)
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -3915,7 +3915,7 @@ GameObject:
   - component: {fileID: 1163646713687645188}
   m_Layer: 0
   m_Name: TVE_Clover_01_Var4_Prefab (1)
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -4074,7 +4074,7 @@ GameObject:
   - component: {fileID: 7676623093587791490}
   m_Layer: 0
   m_Name: Meadow_Grass_01_Var3_LOD0
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -4155,7 +4155,7 @@ GameObject:
   - component: {fileID: 7185796034076368101}
   m_Layer: 8
   m_Name: TVE_Meadow_Grass_01_Var6_Prefab (4)
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4309,7 +4309,7 @@ GameObject:
   - component: {fileID: 3321434346150610075}
   m_Layer: 8
   m_Name: TVE_Fern_var03_Prefab (3)
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -4792,7 +4792,7 @@ GameObject:
   - component: {fileID: 1122597688064564481}
   m_Layer: 0
   m_Name: TVE_Clover_01_Var4_Prefab
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -5113,7 +5113,7 @@ GameObject:
   - component: {fileID: 5476384707301719736}
   m_Layer: 0
   m_Name: Meadow_Grass_01_Var3_LOD1
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -5195,7 +5195,7 @@ GameObject:
   - component: {fileID: 4815869289252492589}
   m_Layer: 0
   m_Name: Rock_Granite_reFto_LOD0
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 81

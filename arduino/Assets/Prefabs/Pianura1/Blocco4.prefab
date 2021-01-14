@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 3774505722527673813}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 3774505722740776285}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 3761482166821501596}
   m_Layer: 0
   m_Name: Rock_Granite_reFto_LOD2
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -458,7 +458,7 @@ GameObject:
   - component: {fileID: 3761482164761571308}
   m_Layer: 0
   m_Name: Rock_Granite_reFto_LOD2
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -783,7 +783,7 @@ GameObject:
   - component: {fileID: 7211945186853493171}
   m_Layer: 0
   m_Name: Rock_Granite_reFto_LOD0
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 81
@@ -879,7 +879,7 @@ GameObject:
   - component: {fileID: 6682508184161848264}
   m_Layer: 0
   m_Name: Rock_Granite_reFto_LOD0
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 81
@@ -1288,7 +1288,7 @@ GameObject:
   - component: {fileID: 6853914547386562220}
   m_Layer: 0
   m_Name: TVE_Rock_Granite_reFto (7)
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 81
@@ -1367,7 +1367,7 @@ GameObject:
   - component: {fileID: 6853914548497523676}
   m_Layer: 0
   m_Name: TVE_Rock_Granite_reFto (2)
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 81
@@ -1446,7 +1446,7 @@ GameObject:
   - component: {fileID: 3760512600665415562}
   m_Layer: 0
   m_Name: Rock_Granite_reFto_LOD1
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -1527,7 +1527,7 @@ GameObject:
   - component: {fileID: 3760512600358701818}
   m_Layer: 0
   m_Name: Rock_Granite_reFto_LOD1
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80

@@ -807,7 +807,7 @@ GameObject:
   - component: {fileID: 9151101508363770896}
   m_Layer: 0
   m_Name: Rock_Granite_reFto_LOD1
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -888,7 +888,7 @@ GameObject:
   - component: {fileID: 9151101507637941337}
   m_Layer: 0
   m_Name: Rock_Granite_reFto_LOD1
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -969,7 +969,7 @@ GameObject:
   - component: {fileID: 1572537921792193846}
   m_Layer: 0
   m_Name: TVE_Rock_Granite_reFto (4)
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 81
@@ -1047,7 +1047,7 @@ GameObject:
   - component: {fileID: 1572537923928882559}
   m_Layer: 0
   m_Name: TVE_Rock_Granite_reFto
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 81
@@ -1911,7 +1911,7 @@ GameObject:
   - component: {fileID: 9150258941212714047}
   m_Layer: 0
   m_Name: Rock_Granite_reFto_LOD2
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -1992,7 +1992,7 @@ GameObject:
   - component: {fileID: 9150258940075715702}
   m_Layer: 0
   m_Name: Rock_Granite_reFto_LOD2
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 80
@@ -2155,7 +2155,7 @@ GameObject:
   - component: {fileID: 2269624343151889863}
   m_Layer: 0
   m_Name: Rock_Granite_reFto_LOD0
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 81
@@ -2251,7 +2251,7 @@ GameObject:
   - component: {fileID: 4218359428684973119}
   m_Layer: 0
   m_Name: Rock_Granite_reFto_LOD0
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 81

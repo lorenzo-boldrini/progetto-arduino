@@ -5172,7 +5172,7 @@ GameObject:
   - component: {fileID: 1897256109018884598}
   m_Layer: 0
   m_Name: Canyon Sandstone Rocky Ground_LOD2__ulbdbaf
-  m_TagString: Untagged
+  m_TagString: Bioma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
