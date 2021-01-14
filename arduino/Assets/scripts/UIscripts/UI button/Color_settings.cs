@@ -5,8 +5,11 @@ using UnityEngine;
 public class Color_settings : MonoBehaviour
 {
     public GameObject Character;
+
+
     public Material[] CharacterColor;
-    
+    public List<bool> purchaismat = new List<bool>();
+
     public int ColorSet;
 
 
@@ -14,10 +17,17 @@ public class Color_settings : MonoBehaviour
     [SerializeField] GameObject LeftButton;
     [SerializeField] GameObject SelectButton;
     [SerializeField] GameObject BuyButton;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        for(int i = 0; i <= CharacterColor.Length; i++)
+        {
+            print(i);
+            purchaismat.Add(false);
+            purchaismat[i] = PlayerPrefs.GetInt("mat" + i, 0) == 0 ? false : true;
+        }
     }
 
    public void ColorSettingsLeft()
@@ -47,6 +57,21 @@ public class Color_settings : MonoBehaviour
     }
     void SetColor()
     {
+        print(ColorSet);
         Character.GetComponent<SkinnedMeshRenderer>().material = CharacterColor[ColorSet];
+
+        if (PlayerPrefs.GetInt("mat" + ColorSet, 0) == 1)
+        {
+
+        }
+
+    }
+
+    public void buy_mat()
+    {
+        PlayerPrefs.SetInt("mat" + ColorSet, 1);
     }
 }
+
+
+
