@@ -22,7 +22,6 @@ public class score : MonoBehaviour
     void Update()
     {
         Score = (int)(Mathf.Round(transform.position.z));
-        print(Score);
         ScoreText.text = "Score: " + Score.ToString();
     }
 
