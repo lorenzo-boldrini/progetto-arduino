@@ -26,6 +26,9 @@ public class Porta_seriale : MonoBehaviour
     public UnityEvent buttonUp;
 
     public bool buttonDownA;
+
+
+    public Material playerMat;
     // Start is called before the first frame update
     void Start()
     {
@@ -106,12 +109,17 @@ public class Porta_seriale : MonoBehaviour
 
     void TakePlayerData()
     {
-        if (SceneManager.GetActiveScene().name == "test_vegetation" && Refplayer == null || Score_Ref == null || coin_ref == null || playerController == null)
+        if (SceneManager.GetActiveScene().buildIndex != 0 )
         {
-            Refplayer = GameObject.Find("Fairy@Running 1");
-            Score_Ref = Refplayer.GetComponent<score>();
-            coin_ref = Refplayer.GetComponent<coin_player_counter>();
-            playerController = Refplayer.GetComponent<character_controller>();
+            if (Refplayer == null || Score_Ref == null || coin_ref == null || playerController == null)
+            {
+                Debug.Log(SceneManager.GetActiveScene().buildIndex);
+                Refplayer = GameObject.Find("Fairy@Running 1");
+                GameObject.Find("Group49690").GetComponent<SkinnedMeshRenderer>().material = playerMat;
+                Score_Ref = Refplayer.GetComponent<score>();
+                coin_ref = Refplayer.GetComponent<coin_player_counter>();
+                playerController = Refplayer.GetComponent<character_controller>();
+            }
         }
     }
 }
