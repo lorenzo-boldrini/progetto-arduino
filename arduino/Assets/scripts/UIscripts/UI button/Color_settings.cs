@@ -17,18 +17,28 @@ public class Color_settings : MonoBehaviour
     [SerializeField] GameObject LeftButton;
     [SerializeField] GameObject SelectButton;
     [SerializeField] GameObject BuyButton;
+    [SerializeField] GameObject price;
 
+    public Porta_seriale putMaterial;
 
     // Start is called before the first frame update
     void Start()
     {
         for(int i = 0; i < CharacterColor.Length; i++)
         {
-            purchaismat[i] = PlayerPrefs.GetInt("mat" + i, 0) == 0 ? false : true;
+            print(i);
+            if (i == 0)
+                PlayerPrefs.SetInt("mat" + i, 1);
+            purchaismat.Add(PlayerPrefs.GetInt("mat" + i, 0) == 0 ? false : true);
+           //PlayerPrefs.SetInt("mat" + i, 0);
+
         }
+        SetColor();
+        putMaterial.playerMat = CharacterColor[0];
     }
 
-   public void ColorSettingsLeft()
+
+    public void ColorSettingsLeft()
     {
         ColorSet++;
         if(ColorSet >= CharacterColor.Length - 1)
@@ -61,12 +71,14 @@ public class Color_settings : MonoBehaviour
         if (PlayerPrefs.GetInt("mat" + ColorSet, 0) == 1)
         {
             BuyButton.SetActive(false);
+            price.SetActive(false);
             SelectButton.SetActive(true);
         }
         else
         {
             BuyButton.SetActive(true);
-            SelectButton.SetActive(true);
+            price.SetActive(true);
+            SelectButton.SetActive(false);
         }
 
     }
@@ -74,6 +86,15 @@ public class Color_settings : MonoBehaviour
     public void buy_mat()
     {
         PlayerPrefs.SetInt("mat" + ColorSet, 1);
+        SetColor();
+        int cash = PlayerPrefs.GetInt("Coin", 0);
+        PlayerPrefs.SetInt("Coin", cash - 25);
+    }
+    
+
+    public void Setmaterial()
+    {
+        putMaterial.playerMat = CharacterColor[ColorSet];
     }
 }
 

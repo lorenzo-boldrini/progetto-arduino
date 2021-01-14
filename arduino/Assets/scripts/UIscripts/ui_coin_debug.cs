@@ -10,12 +10,11 @@ public class ui_coin_debug : MonoBehaviour
     void Start()
     {
         _Coin_debug = GetComponent<TMP_Text>();
-        _Coin_debug.text = PlayerPrefs.GetInt("Coin", 0).ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        _Coin_debug.text = PlayerPrefs.GetInt("Coin", 0).ToString();
     }
 }
