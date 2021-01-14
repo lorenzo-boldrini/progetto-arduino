@@ -22,10 +22,8 @@ public class Color_settings : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 0; i <= CharacterColor.Length; i++)
+        for(int i = 0; i < CharacterColor.Length; i++)
         {
-            print(i);
-            purchaismat.Add(false);
             purchaismat[i] = PlayerPrefs.GetInt("mat" + i, 0) == 0 ? false : true;
         }
     }
@@ -62,7 +60,13 @@ public class Color_settings : MonoBehaviour
 
         if (PlayerPrefs.GetInt("mat" + ColorSet, 0) == 1)
         {
-
+            BuyButton.SetActive(false);
+            SelectButton.SetActive(true);
+        }
+        else
+        {
+            BuyButton.SetActive(true);
+            SelectButton.SetActive(true);
         }
 
     }
