@@ -7,12 +7,12 @@ public class character_controller : MonoBehaviour
     Animator _animCon;
 
     [Range(0,5)]
-    [SerializeField] float speed;
+    public float speed;
     float PlayerXpose;
     Rigidbody _RG;
 
     [Range(0, 10)]
-    [SerializeField] float JumpForce;
+    public float JumpForce;
     public bool canJump;
     // Start is called before the first frame update
     void Start()
@@ -72,13 +72,8 @@ public class character_controller : MonoBehaviour
         {
             Debug.Log("salta puttanella");
             _RG.AddForce(new Vector3(0, JumpForce, 0), ForceMode.Impulse);
-            
-        }
-    }
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.tag == "Bioma")
             canJump = false;
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {

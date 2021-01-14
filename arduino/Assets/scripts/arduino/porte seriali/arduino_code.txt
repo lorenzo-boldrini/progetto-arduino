@@ -1,8 +1,11 @@
 /*
-  Sketch di esempio per comunicare dati a Arduino usando il seriale.
+  Sketch di esempio per comunicare dati a Arduino usando il seriale, il quale mostra questi ultimi su un piccolo monitor usando la libreria U8x8lib.
+  Link a documentazione schermo : https://github.com/olikraus/u8g2/wiki/u8x8reference
+  Link a documentazione fonts : https://github.com/olikraus/u8g2/wiki/fntlist8x8
   Samuele Cigardi per NABA 2020
 */
 
+// Tutti i Serial.print segnati come debug, non sono dati necessari per la comunicazione con unity, quindi andrebbero rimossi nel vostro codice finale.
 
 #include <Arduino.h>
 #include <U8x8lib.h>
@@ -14,55 +17,38 @@
 String inputString = "";         // a String to hold incoming data
 bool stringComplete = false;  // whether the string is complete
 
-bool ScreenActive = true;
-
 String ScreenString = "";
+
+int letterCount;
+ 
 void setup() {
   // initialize serial:
   Serial.begin(9600);
-  // reserve 200 bytes for the inputString:
   
+  // Inizializza lo schermo
+  //u8x8.setBusClock(100000);  // If you breakout other modules, please enable this line
   u8x8.begin();
   u8x8.setFlipMode(1);
-  pinMode(LED_BUILTIN, OUTPUT);
-  digitalWrite(LED_BUILTIN, HIGH);
 }
-
+ 
 void loop() {
-  // stringComplete diventa vero ogni volta che una nuova stringa arriva ad arduino via seriale
-   if (stringComplete) {   
-      // Controlla se la stringa in ingresso contiene la parola d'ordine sc
-      if(inputString.substring(0,2) == "sc"){
-        ScreenActive = true;
-        ScreenString = inputString.substring(2);
-        // DEBUG
-        Serial.println(ScreenString);
-      }
-      else {
-        //DEBUG
-        Serial.println("String Wrong");
-      }   
-         if(inputString == "pulisci"){
-           ScreenActive = false;
-         }
 
-    // Aggiorna lo schermo
-    if(ScreenActive == true){
-    u8x8.setFont(u8x8_font_amstrad_cpc_extended_r);
+  if(stringComplete){
+    if(inputString.substring(0,2) == "dt"){
+    String Dato1 = getValue(inputString,'/',0);
+    //String Dato2 = getValue(inputString,'/',1);
+     u8x8.setFont(u8x8_font_courB18_2x3_f);
     u8x8.setCursor(0, 0);
-    u8x8.print("score: " + ScreenString);
-    }
-    else{
-    u8x8.clear();
-    }
-      
-    // clear the string:
-    inputString = "";
-    stringComplete = false;
+    u8x8.print(Dato1.substring(2));
+
+  /* u8x8.setFont(u8x8_font_courB18_2x3_f);
+    u8x8.setCursor(0, 4);
+    u8x8.print(Dato2);*/
+
+    }/*else{
+      u8x8.clear();
+    }*/
   }
-//-----------------------input-----------------------------------------------------------------------------
-
-
    int potValue = analogRead(A0);
   int buttonValue = digitalRead(6);
   String sensorValue = "";
@@ -73,9 +59,30 @@ void loop() {
   sensorValue += "/";
   sensorValue += String(buttonValue);
 
-  Serial.println(sensorValue);
-}
+  Serial.println(sensorValue); 
 
+   inputString = "";
+    stringComplete = false;
+  }     
+  
+
+
+String getValue(String data, char separator, int index)
+{
+  int found = 0;
+  int strIndex[] = {0, -1};
+  int maxIndex = data.length()-1;
+
+  for(int i=0; i<=maxIndex && found<=index; i++){
+    if(data.charAt(i)==separator || i==maxIndex){
+        found++;
+        strIndex[0] = strIndex[1]+1;
+        strIndex[1] = (i == maxIndex) ? i+1 : i;
+    }
+  }
+
+  return found>index ? data.substring(strIndex[0], strIndex[1]) : "";
+}
 /*
   SerialEvent occurs whenever a new data comes in the hardware serial RX. This
   routine is run between each time loop() runs, so using delay inside loop can
