@@ -70,13 +70,11 @@ public class Map_Setting : MonoBehaviour
         if (PlayerPrefs.GetInt("map" + Mapnum, 0) == 1)
         {
             BuyButton.SetActive(false);
-            price.SetActive(false);
             SelectButton.SetActive(true);
         }
         else
         {
             BuyButton.SetActive(true);
-            price.SetActive(true);
             SelectButton.SetActive(false);
         }
 

@@ -30,7 +30,7 @@ public class Color_settings : MonoBehaviour
             if (i == 0)
                 PlayerPrefs.SetInt("mat" + i, 1);
             purchaismat.Add(PlayerPrefs.GetInt("mat" + i, 0) == 0 ? false : true);
-           //PlayerPrefs.SetInt("mat" + i, 0);
+           PlayerPrefs.SetInt("mat" + i, 0);
 
         }
         SetColor();
@@ -71,13 +71,11 @@ public class Color_settings : MonoBehaviour
         if (PlayerPrefs.GetInt("mat" + ColorSet, 0) == 1)
         {
             BuyButton.SetActive(false);
-            price.SetActive(false);
             SelectButton.SetActive(true);
         }
         else
         {
             BuyButton.SetActive(true);
-            price.SetActive(true);
             SelectButton.SetActive(false);
         }
 
@@ -85,10 +83,13 @@ public class Color_settings : MonoBehaviour
 
     public void buy_mat()
     {
-        PlayerPrefs.SetInt("mat" + ColorSet, 1);
-        SetColor();
-        int cash = PlayerPrefs.GetInt("Coin", 0);
-        PlayerPrefs.SetInt("Coin", cash - 25);
+        if (PlayerPrefs.GetInt("Coin", 0) >= 25)
+        {
+            PlayerPrefs.SetInt("mat" + ColorSet, 1);
+            SetColor();
+            int cash = PlayerPrefs.GetInt("Coin", 0);
+            PlayerPrefs.SetInt("Coin", cash - 25);
+        }
     }
     
 
