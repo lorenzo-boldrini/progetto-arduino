@@ -15,6 +15,7 @@ public class coin_player_counter : MonoBehaviour
     {
         total_coin = PlayerPrefs.GetInt("Coin", 0);
         coinForScreen = PlayerPrefs.GetInt("Coin", 0);
+        PlayerPrefs.SetInt("Coin", 250);
     }
     private void OnTriggerEnter(Collider other)
     {
