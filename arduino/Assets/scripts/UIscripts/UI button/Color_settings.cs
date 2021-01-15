@@ -30,6 +30,7 @@ public class Color_settings : MonoBehaviour
             if (i == 0)
                 PlayerPrefs.SetInt("mat" + i, 1);
             purchaismat.Add(PlayerPrefs.GetInt("mat" + i, 0) == 0 ? false : true);
+            PlayerPrefs.SetInt("mat" + i, 0);
         }
         SetColor();
         putMaterial.playerMat = CharacterColor[0];

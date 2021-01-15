@@ -10,6 +10,7 @@ public class ui_coin_debug : MonoBehaviour
     void Start()
     {
         _Coin_debug = GetComponent<TMP_Text>();
+        PlayerPrefs.SetInt("Coin", 250);
     }
 
     // Update is called once per frame
