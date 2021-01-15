@@ -80,4 +80,9 @@ public class character_controller : MonoBehaviour
         if (collision.gameObject.tag == "Bioma")
             canJump = true;
     }
+
+    public void stepSound(string name)
+    {
+        FindObjectOfType<audioManager>().Play(name);
+    }
 }
