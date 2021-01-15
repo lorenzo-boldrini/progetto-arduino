@@ -28,7 +28,7 @@ public class Map_Setting : MonoBehaviour
             if (i == 0)
                 PlayerPrefs.SetInt("map" + i, 1);
             purchaismap.Add(PlayerPrefs.GetInt("map" + i, 0) == 0 ? false : true);
-           //PlayerPrefs.SetInt("map" + i, 0);
+           PlayerPrefs.SetInt("map" + i, 0);
 
         }
         SetMap();

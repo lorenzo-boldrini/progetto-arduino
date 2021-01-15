@@ -32,6 +32,18 @@ public class Porta_seriale : MonoBehaviour
 
     public Material playerMat;
     public int numeroMappa;
+
+    private void Awake()
+    {
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("inputManager");
+
+        if (objs.Length > 1)
+        {
+            Destroy(this.gameObject);
+        }
+
+        DontDestroyOnLoad(this.gameObject);
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +54,6 @@ public class Porta_seriale : MonoBehaviour
             coin_ref = Refplayer.GetComponent<coin_player_counter>();
             playerController = Refplayer.GetComponent<character_controller>();
         }
-        DontDestroyOnLoad(this.gameObject);
         inizializeArduino();
         TredArduino = new Thread(ArduinoSerialRead);
         TredArduino.Start();
