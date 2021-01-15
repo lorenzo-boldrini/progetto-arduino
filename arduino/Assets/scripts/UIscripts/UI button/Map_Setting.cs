@@ -82,10 +82,13 @@ public class Map_Setting : MonoBehaviour
 
     public void buy_Map()
     {
-        PlayerPrefs.SetInt("map" + Mapnum, 1);
-        SetMap();
-        int cash = PlayerPrefs.GetInt("Coin", 0);
-        PlayerPrefs.SetInt("Coin", cash - 25);
+        if (PlayerPrefs.GetInt("Coin", 0) >= 25)
+        {
+            PlayerPrefs.SetInt("map" + Mapnum, 1);
+            SetMap();
+            int cash = PlayerPrefs.GetInt("Coin", 0);
+            PlayerPrefs.SetInt("Coin", cash - 25);
+        }
     }
     
 
