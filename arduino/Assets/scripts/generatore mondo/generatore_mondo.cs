@@ -23,24 +23,32 @@ public class generatore_mondo : MonoBehaviour
     public int contatore;
 
     public GameObject coin;
+
+    public int worldSet;
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 0; i <= 30; i++)
+        counter = 0;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        while (counter <= 30)
         {
-            if (counter < 10)
+            if (/*counter < 10*/ worldSet == 0)
             {
                 int IndiceRandomico = Random.Range(0, bioma1.Length);
                 DistanceCounter = distance * counterPos;
                 Vector3 distance_pos = new Vector3(0, 0, DistanceCounter);
                 var obj = Instantiate(bioma1[IndiceRandomico], distance_pos, Quaternion.identity);
-                if(counter > 1)
-                generate_obstacle(distance_pos, obj);
+                if (counter > 1)
+                    generate_obstacle(distance_pos, obj);
                 counter++;
                 counterPos++;
                 contatore++;
             }
-            else if (counter >= 10 && counter < 20)
+            else if (/*counter >= 10 && counter < 20*/ worldSet == 1)
             {
                 int IndiceRandomico = Random.Range(0, bioma2.Length);
                 DistanceCounter = distance * counterPos;
@@ -51,7 +59,7 @@ public class generatore_mondo : MonoBehaviour
                 counterPos++;
                 contatore++;
             }
-            else if (counter >= 20 && counter < 30)
+            else if (/*counter >= 20 && counter < 30*/ worldSet == 2)
             {
                 int IndiceRandomico = Random.Range(0, bioma3.Length);
                 DistanceCounter = distance * counterPos;
@@ -63,13 +71,6 @@ public class generatore_mondo : MonoBehaviour
                 contatore++;
             }
         }
-        counter = 0;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-      
     }
 
 
@@ -97,7 +98,7 @@ public class generatore_mondo : MonoBehaviour
 
     public void WorldGen()
     {
-        if (counter < 10)
+        if (worldSet == 0)
         {
             int IndiceRandomico = Random.Range(0, bioma1.Length);
             DistanceCounter = distance * counterPos;
@@ -108,7 +109,7 @@ public class generatore_mondo : MonoBehaviour
             counterPos++;
             contatore++;
         }
-        else if (counter >= 10 && counter < 20)
+        else if (worldSet == 1)
         {
             int IndiceRandomico = Random.Range(0, bioma2.Length);
             DistanceCounter = distance * counterPos;
@@ -119,7 +120,7 @@ public class generatore_mondo : MonoBehaviour
             counterPos++;
             contatore++;
         }
-        else if (counter >= 20 && counter < 30)
+        else if (worldSet == 2)
         {
             int IndiceRandomico = Random.Range(0, bioma3.Length);
             DistanceCounter = distance * counterPos;

@@ -17,7 +17,9 @@ public class Porta_seriale : MonoBehaviour
     public score Score_Ref;
     public coin_player_counter coin_ref;
     public character_controller playerController;
+    
     GameObject Refplayer;
+    GameObject GenWorldRef;
 
     string potenziometroValueString = "";
 
@@ -29,6 +31,7 @@ public class Porta_seriale : MonoBehaviour
 
 
     public Material playerMat;
+    public int numeroMappa;
     // Start is called before the first frame update
     void Start()
     {
@@ -115,6 +118,8 @@ public class Porta_seriale : MonoBehaviour
             {
                 Debug.Log(SceneManager.GetActiveScene().buildIndex);
                 Refplayer = GameObject.Find("Fairy@Running 1");
+                GenWorldRef = GameObject.Find("generatore_mondo");
+                GenWorldRef.GetComponent<generatore_mondo>().worldSet = numeroMappa;
                 GameObject.Find("Group49690").GetComponent<SkinnedMeshRenderer>().material = playerMat;
                 Score_Ref = Refplayer.GetComponent<score>();
                 coin_ref = Refplayer.GetComponent<coin_player_counter>();
